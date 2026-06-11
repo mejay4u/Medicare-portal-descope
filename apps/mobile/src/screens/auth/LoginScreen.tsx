@@ -10,41 +10,108 @@ import {
   Platform,
   ScrollView,
   Alert,
+  Linking,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as LocalAuthentication from 'expo-local-authentication';
 import * as WebBrowser from 'expo-web-browser';
 import * as AuthSession from 'expo-auth-session';
-import { descopeService, type DescopeTokenData } from '../../services/descope.service';
+import {
+  descopeService,
+  type DescopeTokenData,
+  type SsoProvider,
+} from '../../services/descope.service';
+import { signInWithHostedFlow } from '../../services/descopeHostedAuth';
 import { useAuthStore } from '../../store/auth.store';
 import { getRefreshToken, isBiometricsEnabled, saveRefreshToken } from '../../utils/secureStore';
+import WhatsAppLoginModal from '../../components/auth/WhatsAppLoginModal';
 import type { LoginScreenProps } from '../../navigation/types';
 
 WebBrowser.maybeCompleteAuthSession();
 
 const redirectUri = AuthSession.makeRedirectUri({ scheme: 'medicare-portal' });
 
+type IconName = React.ComponentProps<typeof MaterialCommunityIcons>['name'];
+
+const SSO_PROVIDERS: { id: SsoProvider; label: string; icon: IconName; color: string }[] = [
+  { id: 'google', label: 'Google', icon: 'google', color: '#DB4437' },
+  { id: 'apple', label: 'Apple', icon: 'apple', color: '#000000' },
+  { id: 'facebook', label: 'Facebook', icon: 'facebook', color: '#1877F2' },
+  { id: 'microsoft', label: 'Microsoft', icon: 'microsoft', color: '#00A4EF' },
+];
+
 export default function LoginScreen({ navigation }: LoginScreenProps) {
   const [loading, setLoading] = useState(false);
   const [biometricsAvailable, setBiometricsAvailable] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [whatsAppVisible, setWhatsAppVisible] = useState(false);
 
   const { setTokens, setUser, subscriberId } = useAuthStore();
+  const verifiedMagicLink = React.useRef<string | null>(null);
 
   React.useEffect(() => {
     LocalAuthentication.hasHardwareAsync().then(setBiometricsAvailable);
   }, []);
 
-  async function handleGoogleSSO() {
+  // Magic link emails re-open the app with a `t` token in the URL.
+  React.useEffect(() => {
+    async function verifyFromUrl(url: string | null) {
+      if (!url) return;
+      let token: string | null = null;
+      try {
+        token = new URL(url).searchParams.get('t');
+      } catch {
+        return;
+      }
+      if (!token || verifiedMagicLink.current === token) return;
+      verifiedMagicLink.current = token;
+
+      setLoading(true);
+      setError(null);
+      try {
+        const response = await descopeService.magicLinkVerify(token);
+        if (response.ok && response.data) {
+          await completeLogin(response.data as unknown as DescopeTokenData, 'member');
+        }
+      } catch (e) {
+        setError(e instanceof Error ? e.message : 'Magic link verification failed.');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    const subscription = Linking.addEventListener('url', ({ url }) => verifyFromUrl(url));
+    Linking.getInitialURL().then(verifyFromUrl);
+    return () => subscription.remove();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function completeLogin(data: DescopeTokenData, fallbackLoginId: string) {
+    const { sessionJwt, refreshJwt, user } = data;
+    if (!sessionJwt) {
+      throw new Error('Authentication succeeded but no session token was received.');
+    }
+    if (refreshJwt) await saveRefreshToken(refreshJwt);
+    setTokens(sessionJwt, refreshJwt ?? '');
+    setUser(
+      user?.loginIds?.[0] ?? fallbackLoginId,
+      user?.name ?? 'Member',
+      user?.customAttributes?.subscriberId ?? subscriberId ?? undefined,
+    );
+  }
+
+  async function handleSSO(provider: SsoProvider) {
     setError(null);
+    setNotice(null);
     setLoading(true);
     try {
-      const response = await descopeService.oauthStart('google', redirectUri);
+      const response = await descopeService.oauthStart(provider, redirectUri);
       if (!response.ok || !response.data?.url) {
-        throw new Error(response.error?.errorMessage || 'Failed to start Google SSO');
+        throw new Error(response.error?.errorMessage || `Failed to start ${provider} sign-in`);
       }
 
       const result = await WebBrowser.openAuthSessionAsync(response.data.url, redirectUri);
@@ -56,10 +123,10 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
         if (code) {
           const exchangeResponse = await descopeService.oauthExchange(code);
           if (exchangeResponse.ok && exchangeResponse.data) {
-            const { sessionJwt, refreshJwt, user } = exchangeResponse.data as unknown as DescopeTokenData;
+            const data = exchangeResponse.data as unknown as DescopeTokenData;
 
             // Prefer Descope-persisted subscriber ID, fall back to locally stored one
-            const existingSubId = user.customAttributes?.subscriberId || subscriberId;
+            const existingSubId = data.user.customAttributes?.subscriberId || subscriberId;
 
             if (!existingSubId) {
               Alert.alert(
@@ -70,21 +137,65 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
               return;
             }
 
-            if (refreshJwt) await saveRefreshToken(refreshJwt);
-            setTokens(sessionJwt, refreshJwt ?? '');
-            setUser(user.loginIds[0], user.name ?? 'Member', existingSubId);
+            await completeLogin(data, data.user.loginIds[0]);
           }
         }
       }
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'Google Sign-In failed.');
+      setError(e instanceof Error ? e.message : `${provider} sign-in failed.`);
     } finally {
       setLoading(false);
     }
   }
 
+  async function handleMagicLink() {
+    if (!email) {
+      setError('Enter your email address above, then tap Magic Link.');
+      return;
+    }
+    setError(null);
+    setNotice(null);
+    setLoading(true);
+    try {
+      const response = await descopeService.magicLinkSignIn(email, redirectUri);
+      if (!response.ok) {
+        throw new Error('Failed to send magic link');
+      }
+      setNotice(`Magic link sent to ${email}. Open it on this device to sign in.`);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Failed to send magic link.');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function handlePasskey() {
+    setError(null);
+    setNotice(null);
+    setLoading(true);
+    try {
+      const data = await signInWithHostedFlow(redirectUri, email || undefined);
+      await completeLogin(data, email || 'member');
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Passkey sign-in failed.');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function handleWhatsAppSuccess(data: DescopeTokenData) {
+    setWhatsAppVisible(false);
+    setError(null);
+    try {
+      await completeLogin(data, 'member');
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'WhatsApp sign-in failed.');
+    }
+  }
+
   async function handleBiometricAuth() {
     setError(null);
+    setNotice(null);
     try {
       const enabled = await isBiometricsEnabled();
       const token = await getRefreshToken();
@@ -117,12 +228,12 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
         setLoading(true);
         const response = await descopeService.refreshSession(token);
         if (response.ok && response.data) {
-          const { sessionJwt, refreshJwt, user } = response.data as unknown as DescopeTokenData;
-          setTokens(sessionJwt, refreshJwt ?? token);
+          const data = response.data as unknown as DescopeTokenData;
+          setTokens(data.sessionJwt, data.refreshJwt ?? token);
           setUser(
-            user?.loginIds?.[0] ?? 'Member',
-            user?.name ?? 'Member',
-            user?.customAttributes?.subscriberId,
+            data.user?.loginIds?.[0] ?? 'Member',
+            data.user?.name ?? 'Member',
+            data.user?.customAttributes?.subscriberId,
           );
         }
       }
@@ -141,23 +252,12 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
 
     setLoading(true);
     setError(null);
+    setNotice(null);
     try {
       const response = await descopeService.signIn(email, password);
 
       if (response.ok && response.data) {
-        const { sessionJwt, refreshJwt, user } = response.data as unknown as DescopeTokenData;
-
-        if (!sessionJwt) {
-          throw new Error('Authentication succeeded but no session token was received.');
-        }
-
-        if (refreshJwt) await saveRefreshToken(refreshJwt);
-        setTokens(sessionJwt, refreshJwt ?? '');
-        setUser(
-          user?.loginIds?.[0] ?? email,
-          user?.name ?? 'Member',
-          user?.customAttributes?.subscriberId,
-        );
+        await completeLogin(response.data as unknown as DescopeTokenData, email);
       } else {
         throw new Error('Invalid response from authentication service');
       }
@@ -189,17 +289,85 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
 
           {/* Form */}
           <View style={styles.form}>
-            <TouchableOpacity
-              style={[styles.googleBtn, loading && styles.btnDisabled]}
-              onPress={handleGoogleSSO}
-              disabled={loading}
-              activeOpacity={0.8}
-              accessibilityRole="button"
-              accessibilityLabel="Continue with Google"
-            >
-              <MaterialCommunityIcons name="google" size={20} color="#003461" style={styles.googleIcon} />
-              <Text style={styles.googleBtnText}>Continue with Google</Text>
-            </TouchableOpacity>
+            <View style={styles.ssoGrid}>
+              {SSO_PROVIDERS.map(({ id, label, icon, color }) => (
+                <TouchableOpacity
+                  key={id}
+                  style={[styles.ssoBtn, loading && styles.btnDisabled]}
+                  onPress={() => handleSSO(id)}
+                  disabled={loading}
+                  activeOpacity={0.8}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Continue with ${label}`}
+                  testID={`sso-${id}-button`}
+                >
+                  <MaterialCommunityIcons name={icon} size={20} color={color} />
+                  <Text style={styles.ssoBtnText}>{label}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+
+            <View style={styles.dividerContainer}>
+              <View style={styles.dividerLine} />
+              <Text style={styles.dividerText}>OR CONTINUE WITH</Text>
+              <View style={styles.dividerLine} />
+            </View>
+
+            <View style={styles.altMethods}>
+              <TouchableOpacity
+                style={[styles.altBtn, loading && styles.btnDisabled]}
+                onPress={() => setWhatsAppVisible(true)}
+                disabled={loading}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel="Continue with WhatsApp"
+                testID="whatsapp-button"
+              >
+                <MaterialCommunityIcons name="whatsapp" size={20} color="#25D366" />
+                <Text style={styles.altBtnText}>WhatsApp</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={[styles.altBtn, loading && styles.btnDisabled]}
+                onPress={handleMagicLink}
+                disabled={loading}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel="Sign in with a magic link"
+                testID="magiclink-button"
+              >
+                <MaterialCommunityIcons name="email-fast-outline" size={20} color="#7C3AED" />
+                <Text style={styles.altBtnText}>Magic Link</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={[styles.altBtn, loading && styles.btnDisabled]}
+                onPress={handlePasskey}
+                disabled={loading}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel="Sign in with a passkey"
+                testID="passkey-button"
+              >
+                <MaterialCommunityIcons name="key-outline" size={20} color="#D97706" />
+                <Text style={styles.altBtnText}>Passkey</Text>
+              </TouchableOpacity>
+
+              {biometricsAvailable && (
+                <TouchableOpacity
+                  style={[styles.altBtn, loading && styles.btnDisabled]}
+                  onPress={handleBiometricAuth}
+                  disabled={loading}
+                  activeOpacity={0.8}
+                  accessibilityRole="button"
+                  accessibilityLabel="Sign in with biometrics"
+                  testID="biometric-button"
+                >
+                  <MaterialCommunityIcons name="face-recognition" size={20} color="#003461" />
+                  <Text style={styles.altBtnText}>Biometric</Text>
+                </TouchableOpacity>
+              )}
+            </View>
 
             <View style={styles.dividerContainer}>
               <View style={styles.dividerLine} />
@@ -242,36 +410,28 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
               </View>
             )}
 
-            <View style={styles.buttonRow}>
-              <TouchableOpacity
-                style={[styles.btn, styles.btnFlex, loading && styles.btnDisabled]}
-                onPress={handleSignIn}
-                disabled={loading}
-                activeOpacity={0.85}
-                accessibilityRole="button"
-                accessibilityLabel="Sign in to your account"
-                testID="login-button"
-              >
-                {loading ? (
-                  <ActivityIndicator color="#fff" size="small" />
-                ) : (
-                  <Text style={styles.btnText}>Sign In</Text>
-                )}
-              </TouchableOpacity>
+            {notice && (
+              <View style={styles.noticeBox} testID="notice-box">
+                <MaterialCommunityIcons name="email-check-outline" size={16} color="#1b6e3c" />
+                <Text style={styles.noticeText}>{notice}</Text>
+              </View>
+            )}
 
-              {biometricsAvailable && (
-                <TouchableOpacity
-                  style={styles.biometricBtn}
-                  onPress={handleBiometricAuth}
-                  disabled={loading}
-                  activeOpacity={0.7}
-                  accessibilityRole="button"
-                  accessibilityLabel="Sign in with biometrics"
-                >
-                  <MaterialCommunityIcons name="face-recognition" size={28} color="#003461" />
-                </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.btn, loading && styles.btnDisabled]}
+              onPress={handleSignIn}
+              disabled={loading}
+              activeOpacity={0.85}
+              accessibilityRole="button"
+              accessibilityLabel="Sign in to your account"
+              testID="login-button"
+            >
+              {loading ? (
+                <ActivityIndicator color="#fff" size="small" />
+              ) : (
+                <Text style={styles.btnText}>Sign In</Text>
               )}
-            </View>
+            </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.registerLink}
@@ -292,13 +452,19 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
               { icon: 'two-factor-authentication', label: 'Two-factor auth' },
             ].map(({ icon, label }) => (
               <View key={label} style={styles.trustItem}>
-                <MaterialCommunityIcons name={icon as any} size={14} color="#00658d" />
+                <MaterialCommunityIcons name={icon as IconName} size={14} color="#00658d" />
                 <Text style={styles.trustLabel}>{label}</Text>
               </View>
             ))}
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
+
+      <WhatsAppLoginModal
+        visible={whatsAppVisible}
+        onClose={() => setWhatsAppVisible(false)}
+        onSuccess={handleWhatsAppSuccess}
+      />
 
       <Text style={styles.footer}>Need help? Call 1-800-555-1234</Text>
     </SafeAreaView>
@@ -334,6 +500,15 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   errorText: { fontSize: 13, color: '#ba1a1a', flex: 1 },
+  noticeBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    backgroundColor: '#d6f5e0',
+    padding: 12,
+    borderRadius: 8,
+  },
+  noticeText: { fontSize: 13, color: '#1b6e3c', flex: 1 },
   btn: {
     backgroundColor: '#003461',
     borderRadius: 12,
@@ -341,26 +516,43 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 8,
   },
-  btnFlex: { flex: 1 },
   btnDisabled: { opacity: 0.6 },
   btnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
-  googleBtn: {
+  ssoGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
+  ssoBtn: {
     flexDirection: 'row',
+    flexBasis: '47%',
+    flexGrow: 1,
     backgroundColor: '#fff',
     borderWidth: 1,
     borderColor: '#e1e3e4',
     borderRadius: 12,
-    paddingVertical: 16,
+    paddingVertical: 14,
     alignItems: 'center',
     justifyContent: 'center',
+    gap: 8,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.05,
     shadowRadius: 4,
     elevation: 2,
   },
-  googleIcon: { marginRight: 10 },
-  googleBtnText: { color: '#003461', fontSize: 16, fontWeight: '700' },
+  ssoBtnText: { color: '#003461', fontSize: 15, fontWeight: '700' },
+  altMethods: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
+  altBtn: {
+    flexDirection: 'row',
+    flexBasis: '47%',
+    flexGrow: 1,
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#e1e3e4',
+    borderRadius: 12,
+    paddingVertical: 14,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  altBtnText: { color: '#003461', fontSize: 15, fontWeight: '700' },
   dividerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -373,17 +565,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#98a2b3',
     letterSpacing: 1.5,
-  },
-  buttonRow: { flexDirection: 'row', gap: 12, marginTop: 8 },
-  biometricBtn: {
-    width: 56,
-    height: 56,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: '#003461',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
   },
   registerLink: { alignItems: 'center', marginTop: 8 },
   registerText: { fontSize: 14, color: '#424750' },

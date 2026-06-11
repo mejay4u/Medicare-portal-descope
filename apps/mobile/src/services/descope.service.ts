@@ -25,52 +25,48 @@ export interface SignUpDetails {
   dob: string;
 }
 
+export type SsoProvider = 'google' | 'apple' | 'facebook' | 'microsoft';
+
 class DescopeService {
-  async signUp(details: SignUpDetails) {
+  get isConfigured(): boolean {
+    return Boolean(projectId);
+  }
+
+  private assertConfigured() {
     if (!projectId) {
-      console.warn('DESCOPE_PROJECT_ID is missing. Sign up is disabled.');
-      return;
-    }
-
-    try {
-      const userDetails = {
-        name: `${details.firstName} ${details.lastName}`,
-        email: details.loginId,
-        customAttributes: {
-          subscriberId: details.subscriberId,
-          ssn: details.ssn,
-          dob: details.dob,
-        },
-      };
-
-      const response = await descopeSdk.password.signUp(
-        details.loginId,
-        details.password || '',
-        // SDK User type omits customAttributes but the API accepts them
-        userDetails as Parameters<typeof descopeSdk.password.signUp>[2],
-      );
-
-      if (!response.ok) {
-        throw new Error(response.error?.errorMessage || 'Registration failed');
-      }
-
-      return response;
-    } catch (error) {
-      throw error;
+      throw new Error('EXPO_PUBLIC_DESCOPE_PROJECT_ID is not set. Configure your Descope project ID.');
     }
   }
 
-  async signIn(loginId: string, password: string) {
-    if (!projectId) {
-      return {
-        ok: true,
-        data: {
-          sessionJwt: 'mock-session-jwt',
-          refreshJwt: 'mock-refresh-jwt',
-          user: { loginIds: [loginId], name: 'Mock Member' },
-        } as DescopeTokenData,
-      };
+  async signUp(details: SignUpDetails) {
+    this.assertConfigured();
+
+    const userDetails = {
+      name: `${details.firstName} ${details.lastName}`,
+      email: details.loginId,
+      customAttributes: {
+        subscriberId: details.subscriberId,
+        ssn: details.ssn,
+        dob: details.dob,
+      },
+    };
+
+    const response = await descopeSdk.password.signUp(
+      details.loginId,
+      details.password || '',
+      // SDK User type omits customAttributes but the API accepts them
+      userDetails as Parameters<typeof descopeSdk.password.signUp>[2],
+    );
+
+    if (!response.ok) {
+      throw new Error(response.error?.errorMessage || 'Registration failed');
     }
+
+    return response;
+  }
+
+  async signIn(loginId: string, password: string) {
+    this.assertConfigured();
 
     const response = await descopeSdk.password.signIn(loginId, password);
     if (!response.ok) {
@@ -92,6 +88,7 @@ class DescopeService {
   }
 
   async oauthStart(provider: string, redirectUrl: string) {
+    this.assertConfigured();
     return descopeSdk.oauth.start(provider, redirectUrl);
   }
 
@@ -99,6 +96,45 @@ class DescopeService {
     const response = await descopeSdk.oauth.exchange(code);
     if (!response.ok) {
       throw new Error(response.error?.errorMessage || 'OAuth exchange failed');
+    }
+    return response;
+  }
+
+  /** Sends a sign-in magic link to the user's email. Tapping the link re-opens
+   *  the app via deep link with a `t` query param passed to magicLinkVerify. */
+  async magicLinkSignIn(email: string, redirectUri: string) {
+    this.assertConfigured();
+
+    const response = await descopeSdk.magicLink.signUpOrIn.email(email, redirectUri);
+    if (!response.ok) {
+      throw new Error(response.error?.errorMessage || 'Failed to send magic link');
+    }
+    return response;
+  }
+
+  async magicLinkVerify(token: string) {
+    const response = await descopeSdk.magicLink.verify(token);
+    if (!response.ok) {
+      throw new Error(response.error?.errorMessage || 'Magic link verification failed');
+    }
+    return response;
+  }
+
+  /** Sends a one-time code to the given phone number over WhatsApp. */
+  async whatsAppStart(phone: string) {
+    this.assertConfigured();
+
+    const response = await descopeSdk.otp.signUpOrIn.whatsapp(phone);
+    if (!response.ok) {
+      throw new Error(response.error?.errorMessage || 'Failed to send WhatsApp code');
+    }
+    return response;
+  }
+
+  async whatsAppVerify(phone: string, code: string) {
+    const response = await descopeSdk.otp.verify.whatsapp(phone, code);
+    if (!response.ok) {
+      throw new Error(response.error?.errorMessage || 'Invalid WhatsApp code');
     }
     return response;
   }
