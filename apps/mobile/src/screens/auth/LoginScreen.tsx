@@ -285,76 +285,6 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
 
           {/* Form */}
           <View style={styles.form}>
-            <SsoProviderGrid disabled={loading} onPress={handleSSO} />
-
-            <View style={styles.dividerContainer}>
-              <View style={styles.dividerLine} />
-              <Text style={styles.dividerText}>OR CONTINUE WITH</Text>
-              <View style={styles.dividerLine} />
-            </View>
-
-            <View style={styles.altMethods}>
-              <TouchableOpacity
-                style={[styles.altBtn, loading && styles.btnDisabled]}
-                onPress={() => setWhatsAppVisible(true)}
-                disabled={loading}
-                activeOpacity={0.8}
-                accessibilityRole="button"
-                accessibilityLabel="Continue with WhatsApp"
-                testID="whatsapp-button"
-              >
-                <MaterialCommunityIcons name="whatsapp" size={20} color="#25D366" />
-                <Text style={styles.altBtnText}>WhatsApp</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                style={[styles.altBtn, loading && styles.btnDisabled]}
-                onPress={handleMagicLink}
-                disabled={loading}
-                activeOpacity={0.8}
-                accessibilityRole="button"
-                accessibilityLabel="Sign in with a magic link"
-                testID="magiclink-button"
-              >
-                <MaterialCommunityIcons name="email-fast-outline" size={20} color="#7C3AED" />
-                <Text style={styles.altBtnText}>Magic Link</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                style={[styles.altBtn, loading && styles.btnDisabled]}
-                onPress={handlePasskey}
-                disabled={loading}
-                activeOpacity={0.8}
-                accessibilityRole="button"
-                accessibilityLabel="Sign in with a passkey"
-                testID="passkey-button"
-              >
-                <MaterialCommunityIcons name="key-outline" size={20} color="#D97706" />
-                <Text style={styles.altBtnText}>Passkey</Text>
-              </TouchableOpacity>
-
-              {biometricsAvailable && (
-                <TouchableOpacity
-                  style={[styles.altBtn, loading && styles.btnDisabled]}
-                  onPress={handleBiometricAuth}
-                  disabled={loading}
-                  activeOpacity={0.8}
-                  accessibilityRole="button"
-                  accessibilityLabel="Sign in with biometrics"
-                  testID="biometric-button"
-                >
-                  <MaterialCommunityIcons name="face-recognition" size={20} color="#003461" />
-                  <Text style={styles.altBtnText}>Biometric</Text>
-                </TouchableOpacity>
-              )}
-            </View>
-
-            <View style={styles.dividerContainer}>
-              <View style={styles.dividerLine} />
-              <Text style={styles.dividerText}>OR SIGN IN WITH EMAIL</Text>
-              <View style={styles.dividerLine} />
-            </View>
-
             <View style={styles.inputGroup}>
               <Text style={styles.label}>Email Address</Text>
               <TextInput
@@ -412,6 +342,70 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
                 <Text style={styles.btnText}>Sign In</Text>
               )}
             </TouchableOpacity>
+
+            <View style={styles.dividerContainer}>
+              <View style={styles.dividerLine} />
+              <Text style={styles.dividerText}>OR CONTINUE WITH</Text>
+              <View style={styles.dividerLine} />
+            </View>
+
+            <SsoProviderGrid disabled={loading} onPress={handleSSO} />
+
+            <View style={styles.altMethods}>
+              <TouchableOpacity
+                style={[styles.altBtn, loading && styles.btnDisabled]}
+                onPress={() => setWhatsAppVisible(true)}
+                disabled={loading}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel="Continue with WhatsApp"
+                testID="whatsapp-button"
+              >
+                <MaterialCommunityIcons name="whatsapp" size={20} color="#25D366" />
+                <Text style={styles.altBtnText}>WhatsApp</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={[styles.altBtn, loading && styles.btnDisabled]}
+                onPress={handleMagicLink}
+                disabled={loading}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel="Sign in with a magic link"
+                testID="magiclink-button"
+              >
+                <MaterialCommunityIcons name="email-fast-outline" size={20} color="#7C3AED" />
+                <Text style={styles.altBtnText}>Magic Link</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={[styles.altBtn, loading && styles.btnDisabled]}
+                onPress={handlePasskey}
+                disabled={loading}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel="Sign in with a passkey"
+                testID="passkey-button"
+              >
+                <MaterialCommunityIcons name="key-outline" size={20} color="#D97706" />
+                <Text style={styles.altBtnText}>Passkey</Text>
+              </TouchableOpacity>
+
+              {biometricsAvailable && (
+                <TouchableOpacity
+                  style={[styles.altBtn, loading && styles.btnDisabled]}
+                  onPress={handleBiometricAuth}
+                  disabled={loading}
+                  activeOpacity={0.8}
+                  accessibilityRole="button"
+                  accessibilityLabel="Sign in with biometrics"
+                  testID="biometric-button"
+                >
+                  <MaterialCommunityIcons name="face-recognition" size={20} color="#003461" />
+                  <Text style={styles.altBtnText}>Biometric</Text>
+                </TouchableOpacity>
+              )}
+            </View>
 
             <TouchableOpacity
               style={styles.registerLink}

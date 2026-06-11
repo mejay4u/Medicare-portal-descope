@@ -12,9 +12,10 @@ import SanctuaryLoadingScreen from './src/screens/SanctuaryLoadingScreen';
 import { setBaseUrl } from '@medicare/shared';
 import { PostHogProvider } from 'posthog-react-native';
 import { initSentry, initPostHog } from './src/services/analytics';
+import { ENV } from './src/config/env';
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:3001';
-setBaseUrl(API_URL);
+// ENV maps localhost to 10.0.2.2 on Android emulators
+setBaseUrl(ENV.API_URL);
 
 initSentry();
 const posthogClient = initPostHog();

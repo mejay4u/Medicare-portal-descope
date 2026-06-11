@@ -10,6 +10,11 @@ const discovery: AuthSession.DiscoveryDocument = {
   tokenEndpoint: 'https://api.descope.com/oauth2/v1/token',
 };
 
+// Which Descope flow the hosted page runs. Must exist (deployed) in the
+// project; override with EXPO_PUBLIC_DESCOPE_PASSKEY_FLOW_ID.
+const PASSKEY_FLOW_ID =
+  ENV.DESCOPE_PASSKEY_FLOW_ID || 'sign-in-passkeys-or-social-with-otp-mfa';
+
 function decodeJwtPayload(jwt: string): Record<string, unknown> {
   try {
     const payload = jwt.split('.')[1];
@@ -37,7 +42,10 @@ export async function signInWithHostedFlow(
     redirectUri,
     scopes: ['openid', 'profile', 'email'],
     usePKCE: true,
-    extraParams: loginHint ? { login_hint: loginHint } : {},
+    extraParams: {
+      flow: PASSKEY_FLOW_ID,
+      ...(loginHint ? { login_hint: loginHint } : {}),
+    },
   });
 
   const result = await request.promptAsync(discovery);

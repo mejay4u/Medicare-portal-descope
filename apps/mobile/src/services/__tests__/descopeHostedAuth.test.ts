@@ -61,7 +61,10 @@ describe('signInWithHostedFlow', () => {
         clientId: 'P2DemoProject',
         redirectUri: 'medicare-portal://auth',
         usePKCE: true,
-        extraParams: { login_hint: 'demo@example.com' },
+        extraParams: expect.objectContaining({
+          flow: expect.any(String),
+          login_hint: 'demo@example.com',
+        }),
       }),
     );
     expect(mockExchangeCodeAsync).toHaveBeenCalledWith(
