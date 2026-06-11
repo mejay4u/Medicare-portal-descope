@@ -1,0 +1,796 @@
+/* ─── Skeleton shimmer ─────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+/* ─── Shared page layout ────────────────────────────────────────── */
+/* Use .pageWrap on <main> in every page for consistent padding.    */
+.pageWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 24px 80px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* Card with pop shadow + hover lift — add to any white card div */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,52,97,0.06);
+  transition: box-shadow 0.22s ease, transform 0.18s ease;
+}
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0,52,97,0.14), 0 1px 4px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+
+/* Generic hover-lift used on list cards (Claims, Benefits, FindCare) */
+.hoverLift {
+  transition: box-shadow 0.2s ease, transform 0.18s ease;
+}
+.hoverLift:hover {
+  box-shadow: 0 8px 28px rgba(0,52,97,0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* ─── Global Reset ─────────────────────────────────────────────── */
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8f9fa;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #191c1d;
+}
+
+/* ─── Top Nav ──────────────────────────────────────────────────── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(248, 249, 250, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.brand {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #003461;
+  letter-spacing: -0.02em;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  color: #1e40af;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #1d4ed8;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #003461;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 6px;
+  transition: transform 0.1s;
+}
+
+.iconBtn:active {
+  transform: scale(0.95);
+}
+
+.conciergeBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #d3e4ff;
+  color: #003461;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.1s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.conciergeBtn:hover {
+  box-shadow: 0 4px 12px rgba(0,52,97,0.2);
+}
+
+.conciergeBtn:active {
+  transform: scale(0.95);
+}
+
+.avatarWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #d3e4ff;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ─── Main ─────────────────────────────────────────────────────── */
+.main {
+  flex: 1;
+  max-width: 1536px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 48px 32px;
+  box-sizing: border-box;
+}
+
+/* ─── Alert Banner ─────────────────────────────────────────────── */
+.alertBanner {
+  background: #ffdbc8;
+  border-left: 4px solid #572500;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 48px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  animation: fadeSlideIn 0.4s ease both;
+}
+
+.alertContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.alertIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #572500;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.alertTitle {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #321300;
+  margin: 0 0 6px;
+}
+
+.alertItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: rgba(50, 19, 0, 0.8);
+  margin: 3px 0;
+}
+
+.alertDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #572500;
+  flex-shrink: 0;
+}
+
+.alertActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.alertPrimaryBtn {
+  padding: 12px 24px;
+  background: #572500;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-shadow: 0 2px 8px rgba(87,37,0,0.3);
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.alertPrimaryBtn:hover { opacity: 0.9; }
+.alertPrimaryBtn:active { transform: scale(0.95); }
+
+.alertSecondaryBtn {
+  padding: 12px 24px;
+  background: transparent;
+  color: #572500;
+  font-weight: 700;
+  border: 1.5px solid #572500;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.alertSecondaryBtn:hover { background: rgba(87,37,0,0.05); }
+.alertSecondaryBtn:active { transform: scale(0.95); }
+
+/* ─── Welcome ──────────────────────────────────────────────────── */
+.welcomeHeading {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #003461;
+  letter-spacing: -0.03em;
+  margin: 0 0 8px;
+}
+
+.welcomeSub {
+  font-size: 1.125rem;
+  color: #424750;
+  margin: 0;
+}
+
+/* ─── Bento Grid ───────────────────────────────────────────────── */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ─── ID Card ──────────────────────────────────────────────────── */
+.idCard {
+  background: #003461;
+  color: #ffffff;
+  border-radius: 16px;
+  border-top-right-radius: 48px;
+  padding: 32px;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,52,97,0.35);
+}
+
+.idCardDecor {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 192px;
+  height: 192px;
+  border-radius: 50%;
+  background: rgba(65, 190, 253, 0.1);
+  pointer-events: none;
+}
+
+.idCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+}
+
+.idCardBrand {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.idCardName {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.idCardMemberId {
+  color: #a3c9ff;
+  font-weight: 500;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.idCardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.idCardLabel {
+  font-size: 0.6875rem;
+  opacity: 0.6;
+  margin: 0 0 2px;
+}
+
+.idCardPlanName {
+  font-weight: 700;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.qrBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.qrBtn:hover { background: rgba(255,255,255,0.22); }
+
+/* ─── ID Card Action Buttons ───────────────────────────────────── */
+.cardActionBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #e1e3e4;
+  border: 1px solid #c2c6d1;
+  border-radius: 10px;
+  color: #003461;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.cardActionBtn:hover { background: #d3e4ff; }
+.cardActionBtn:active { transform: scale(0.98); }
+
+/* ─── Quick Actions ────────────────────────────────────────────── */
+.quickActionsCard {
+  background: #f3f4f5;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.quickActionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.quickActionItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: #ffffff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.15s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #191c1d;
+}
+
+.quickActionItem:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.quickActionItem:active { transform: scale(0.95); }
+
+/* ─── Section Heading ──────────────────────────────────────────── */
+.sectionHeading {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #003461;
+  margin: 0;
+}
+
+/* ─── Benefit Card ─────────────────────────────────────────────── */
+.benefitCard {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(194,198,209,0.2);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.tabBar {
+  display: flex;
+  border-bottom: 1px solid #c2c6d1;
+}
+
+.tab {
+  flex: 1;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #424750;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.tab:hover { background: #f3f4f5; }
+
+.tabActive {
+  flex: 1;
+  padding: 16px 20px;
+  background: rgba(0,52,97,0.04);
+  border: none;
+  border-bottom: 3px solid #003461;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #003461;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.benefitContent {
+  padding: 40px;
+}
+
+.benefitHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.benefitTitle {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #003461;
+  margin: 0 0 6px;
+}
+
+.activeBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,101,141,0.1);
+  color: #00658d;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.activeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00658d;
+}
+
+.metersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.progressTrack {
+  height: 10px;
+  background: #e7e8e9;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.6s ease;
+}
+
+/* ─── Bottom Grid ──────────────────────────────────────────────── */
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* ─── Activity Card ────────────────────────────────────────────── */
+.activityCard {
+  background: #f3f4f5;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.activityItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.activityItem:hover { transform: translateX(6px); }
+
+.activityIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ─── Editorial Card ───────────────────────────────────────────── */
+.editorialCard {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.editorialImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.editorialCard:hover .editorialImg {
+  transform: scale(1.06);
+}
+
+.editorialOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,52,97,0.82) 0%, rgba(0,52,97,0.18) 55%, transparent 100%);
+}
+
+.editorialBody {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  padding: 32px;
+  max-width: 300px;
+}
+
+.editorialTitle {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.625rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.editorialDesc {
+  font-size: 0.9375rem;
+  opacity: 0.9;
+  line-height: 1.55;
+  margin: 0 0 24px;
+}
+
+.editorialBtn {
+  background: #ffffff;
+  color: #003461;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.editorialBtn:hover { background: #d3e4ff; }
+.editorialBtn:active { transform: scale(0.95); }
+
+/* ─── Footer ───────────────────────────────────────────────────── */
+.footer {
+  background: #f3f4f5;
+  margin-top: auto;
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  gap: 32px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.footerBrand {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #003461;
+  margin-bottom: 6px;
+}
+
+.footerLink {
+  font-size: 0.8125rem;
+  color: #727781;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: color 0.2s;
+}
+
+.footerLink:hover { color: #003461; }
+
+/* ─── FAB ──────────────────────────────────────────────────────── */
+.fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 40;
+}
+
+.fabBtn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #003461;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,52,97,0.4);
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.fabBtn:hover { transform: scale(1.08); }
+.fabBtn:active { transform: scale(0.95); }
+
+.fabBadge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  background: #ba1a1a;
+  border-radius: 50%;
+  border: 2px solid #f8f9fa;
+}
+
+/* ─── Material Symbols ─────────────────────────────────────────── */
+:global(.material-symbols-outlined) {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* ─── Animation ────────────────────────────────────────────────── */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+  .metersGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+  .navLinks {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 24px 16px;
+  }
+  .navInner {
+    padding: 14px 16px;
+  }
+  .benefitContent {
+    padding: 24px;
+  }
+  .footerInner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 16px;
+  }
+}
+
+/* ─── Reduced motion ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

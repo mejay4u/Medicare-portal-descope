@@ -1,0 +1,68 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files — NEVER commit credentials
+.env
+.env.local
+.env*.local
+.env.production
+.env.development
+
+# bdd-gen secrets (the .env.sample file IS committed — it has no real keys)
+packages/bdd-gen/.env
+
+# typescript
+*.tsbuildinfo
+
+# generated native folders
+/ios
+/android
+
+# Turbo
+.turbo/
+
+# Playwright
+apps/web/playwright-report/
+apps/web/test-results/
+apps/web/.features-gen/
+
+# Detox
+apps/mobile/test-results/
+apps/mobile/ios/build/
+apps/mobile/android/build/
+apps/mobile/android/app/build/
+
+# Agents
+.agents/
+
+# IDE
+.vscode/

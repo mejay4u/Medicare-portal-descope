@@ -1,0 +1,6191 @@
+{
+  "reviews": [
+    {
+      "initials": "MB",
+      "bg": "#c6e7ff",
+      "name": "Margaret B.",
+      "ago": "2 weeks ago",
+      "stars": 5,
+      "text": "\"The doctor was incredibly patient and thorough. Explained my condition clearly and in a way that actually made sense to me.\""
+    },
+    {
+      "initials": "JW",
+      "bg": "#d3e4ff",
+      "name": "James W.",
+      "ago": "1 month ago",
+      "stars": 5,
+      "text": "\"The treatment plan has made a huge difference in my daily life. I really feel like my health is in good hands.\""
+    },
+    {
+      "initials": "RC",
+      "bg": "#ffdbc8",
+      "name": "Robert C.",
+      "ago": "2 months ago",
+      "stars": 4,
+      "text": "\"Very professional office. The staff is friendly and the doctor takes time to listen without rushing through the appointment.\""
+    },
+    {
+      "initials": "SK",
+      "bg": "#c6e7ff",
+      "name": "Sarah K.",
+      "ago": "3 months ago",
+      "stars": 5,
+      "text": "\"Compassionate care. He didn't rush me through questions about my medication side effects — I felt truly heard.\""
+    },
+    {
+      "initials": "DL",
+      "bg": "#d3e4ff",
+      "name": "David L.",
+      "ago": "3 months ago",
+      "stars": 5,
+      "text": "\"Professional and thorough. The entire medical team seems very synchronized and works seamlessly together.\""
+    }
+  ],
+  "prescriptions": {
+    "morning": [
+      {
+        "name": "Lisinopril",
+        "dose": "10mg Tablet"
+      },
+      {
+        "name": "Metformin",
+        "dose": "500mg Tablet"
+      }
+    ],
+    "evening": [
+      {
+        "name": "Atorvastatin",
+        "dose": "20mg Tablet"
+      }
+    ],
+    "active": [
+      {
+        "name": "Atorvastatin",
+        "dose": "20mg",
+        "indication": "High Cholesterol",
+        "doctor": "Dr. Sarah Jenkins",
+        "lastFilled": "Oct 12",
+        "refills": 2,
+        "status": "refill-ready"
+      },
+      {
+        "name": "Lisinopril",
+        "dose": "10mg",
+        "indication": "High Blood Pressure",
+        "doctor": "Dr. Sarah Jenkins",
+        "lastFilled": "Oct 8",
+        "refills": 5,
+        "status": "refill-ready"
+      },
+      {
+        "name": "Metformin",
+        "dose": "500mg",
+        "indication": "Type 2 Diabetes",
+        "doctor": "Dr. Sarah Jenkins",
+        "lastFilled": "Sep 30",
+        "refills": 0,
+        "status": "no-refills"
+      }
+    ]
+  },
+  "hero": {
+    "tag": "PERSONALIZED CARE",
+    "heading": "CariBear is ready to help.",
+    "greeting": "I am CariBear. You haven't set up your PCP yet. Would you like to set one up?",
+    "ctaLabel": "Chat with CariBear",
+    "ctaPhone": "tel:+18005551234",
+    "conciergeMessage": "I noticed you haven't had your annual check-up yet. Would you like me to find a provider near you?",
+    "aiInsight": {
+      "titleSuffix": "your wellness journey is trending positively.",
+      "description": "Based on your recent blood work and visit history, you are up to date on all vital screenings. Your blood glucose management has shown significant stability over the last quarter."
+    }
+  },
+  "member": {
+    "cardLabel": "MEMBER CARD",
+    "insurerName": "Member Portal",
+    "name": "Eleanor Vance",
+    "memberId": "982 441 8023",
+    "group": "00014",
+    "pcn": "MEDADV"
+  },
+  "settings": {
+    "member": {
+      "name": "Eleanor Vance",
+      "memberId": "AH-99283-XJ",
+      "address": "482 Oakwood Terrace\nPhiladelphia, PA 19146",
+      "phone": "(215) 555-0198"
+    },
+    "preferences": {
+      "language": "English (US)",
+      "communicationPreference": "electronic",
+      "eobPreference": "electronic"
+    }
+  },
+  "plan": {
+    "name": "Member Choice Plus",
+    "coverageThrough": "Dec 2024",
+    "copays": [
+      {
+        "type": "PRIMARY CARE",
+        "amount": "$0 Copay"
+      },
+      {
+        "type": "SPECIALISTS",
+        "amount": "$20 Copay"
+      },
+      {
+        "type": "ER VISIT",
+        "amount": "$50 Copay"
+      }
+    ],
+    "logos": [
+      "H",
+      "D",
+      "V"
+    ],
+    "documentUrl": "#"
+  },
+  "quickActions": [
+    {
+      "id": "find-doctor",
+      "label": "Find a Doctor",
+      "icon": "medical-bag",
+      "color": "#2563EB"
+    },
+    {
+      "id": "refill-rx",
+      "label": "Refill Rx",
+      "icon": "pill",
+      "color": "#2563EB"
+    },
+    {
+      "id": "view-claims",
+      "label": "View Claims",
+      "icon": "file-document-outline",
+      "color": "#2563EB"
+    },
+    {
+      "id": "help-center",
+      "label": "Help Center",
+      "icon": "help-circle-outline",
+      "color": "#2563EB"
+    }
+  ],
+  "recentActivity": [
+    {
+      "id": "act-1",
+      "type": "claim",
+      "statusIcon": "check-circle",
+      "statusColor": "#22C55E",
+      "title": "Claim #99283 processed",
+      "subtitle": "Pharmacy, CVS Health #412",
+      "detail": "$0.00 Cost",
+      "date": "Oct 24",
+      "dateLabel": "OCT\n24"
+    },
+    {
+      "id": "act-2",
+      "type": "appointment",
+      "statusIcon": "calendar-clock",
+      "statusColor": "#3B82F6",
+      "title": "Annual Wellness Upcoming Visit",
+      "subtitle": "Dr. Marcus Thorne • 10:00 AM",
+      "detail": "",
+      "date": "Oct 26",
+      "dateLabel": "OCT\n26"
+    }
+  ],
+  "actionAlert": {
+    "id": "alert-1",
+    "icon": "bell",
+    "iconColor": "#FFFFFF",
+    "backgroundColor": "#EA580C",
+    "title": "Action Required: Benefit Update",
+    "body": "Your annual benefits have been updated for 2026.",
+    "ctaUrl": "#"
+  },
+  "navigation": [
+    {
+      "id": "dashboard",
+      "label": "DASHBOARD",
+      "icon": "view-dashboard-outline"
+    },
+    {
+      "id": "find-care",
+      "label": "FIND CARE",
+      "icon": "map-marker-outline"
+    },
+    {
+      "id": "benefits",
+      "label": "BENEFITS",
+      "icon": "shield-outline"
+    },
+    {
+      "id": "rx",
+      "label": "RX",
+      "icon": "pill"
+    },
+    {
+      "id": "menu",
+      "label": "MENU",
+      "icon": "menu"
+    }
+  ],
+  "providers": [
+    {
+      "id": "p1",
+      "name": "Dr. Sarah Chen, MD",
+      "specialty": "Internal Medicine",
+      "category": "Primary Care",
+      "rating": 4.9,
+      "distance": 0.8,
+      "photo": "https://picsum.photos/seed/p1/200/200",
+      "inNetwork": true,
+      "address": "714 Walnut St, Philadelphia, PA 19107",
+      "coordinate": {
+        "latitude": 39.913,
+        "longitude": -75.1834
+      },
+      "locations": [
+        {
+          "name": "City Center Health Pavilion",
+          "address": "523 Market St, Philadelphia, PA 19107",
+          "phone": "215-555-0101",
+          "coordinate": {
+            "latitude": 39.9268,
+            "longitude": -75.1691
+          }
+        },
+        {
+          "name": "Westside Wellness Clinic",
+          "address": "703 Walnut St, Philadelphia, PA 19107",
+          "phone": "215-555-0102",
+          "coordinate": {
+            "latitude": 40.0006,
+            "longitude": -75.1725
+          }
+        },
+        {
+          "name": "North Broad Medical Hub",
+          "address": "604 South St, Philadelphia, PA 19146",
+          "phone": "215-555-0103",
+          "coordinate": {
+            "latitude": 39.9901,
+            "longitude": -75.1959
+          }
+        },
+        {
+          "name": "South Philly Care Center",
+          "address": "870 Broad St, Philadelphia, PA 19146",
+          "phone": "215-555-0104",
+          "coordinate": {
+            "latitude": 39.9909,
+            "longitude": -75.1644
+          }
+        },
+        {
+          "name": "Main Line Health Associates",
+          "address": "595 Market St, Philadelphia, PA 19104",
+          "phone": "610-555-0105",
+          "coordinate": {
+            "latitude": 39.9175,
+            "longitude": -75.2011
+          }
+        }
+      ],
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 9:00 AM",
+      "yearsExperience": 16,
+      "bio": "Delivers comprehensive preventive care and chronic disease management with a patient-first philosophy.",
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "name": "Dr. Robert Chen",
+      "specialty": "Family Medicine",
+      "category": "Primary Care",
+      "rating": 4.7,
+      "distance": 1.5,
+      "photo": "https://picsum.photos/seed/p2/200/200",
+      "inNetwork": true,
+      "address": "642 Broad St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 40.0016,
+        "longitude": -75.1776
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 2:30 PM",
+      "yearsExperience": 17,
+      "bio": "Delivers comprehensive preventive care and chronic disease management with a patient-first philosophy.",
+      "locations": [
+        {
+          "name": "Main Hospital p2",
+          "address": "427 Chestnut St, Philadelphia, PA 19123",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9038,
+            "longitude": -75.1701
+          }
+        },
+        {
+          "name": "City Clinic p2",
+          "address": "291 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9374,
+            "longitude": -75.1452
+          }
+        },
+        {
+          "name": "Westside Hub p2",
+          "address": "742 Arch St, Philadelphia, PA 19107",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9565,
+            "longitude": -75.1315
+          }
+        },
+        {
+          "name": "Eastside Care p2",
+          "address": "593 Chestnut St, Philadelphia, PA 19123",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9482,
+            "longitude": -75.1644
+          }
+        },
+        {
+          "name": "North Annex p2",
+          "address": "956 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9234,
+            "longitude": -75.1177
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "name": "Dr. Maria Santos",
+      "specialty": "Preventive Care",
+      "category": "Primary Care",
+      "rating": 4.6,
+      "distance": 3.2,
+      "photo": "https://picsum.photos/seed/p3/200/200",
+      "inNetwork": true,
+      "address": "547 Arch St, Philadelphia, PA 19123",
+      "coordinate": {
+        "latitude": 39.9209,
+        "longitude": -75.1832
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Monday, 10:00 AM",
+      "yearsExperience": 18,
+      "bio": "Delivers comprehensive preventive care and chronic disease management with a patient-first philosophy.",
+      "locations": [
+        {
+          "name": "Main Hospital p3",
+          "address": "722 Arch St, Philadelphia, PA 19123",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 40.0005,
+            "longitude": -75.1956
+          }
+        },
+        {
+          "name": "City Clinic p3",
+          "address": "403 Market St, Philadelphia, PA 19104",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9974,
+            "longitude": -75.1283
+          }
+        },
+        {
+          "name": "Westside Hub p3",
+          "address": "684 Chestnut St, Philadelphia, PA 19107",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9859,
+            "longitude": -75.1285
+          }
+        },
+        {
+          "name": "Eastside Care p3",
+          "address": "551 Broad St, Philadelphia, PA 19147",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9053,
+            "longitude": -75.2107
+          }
+        },
+        {
+          "name": "North Annex p3",
+          "address": "984 South St, Philadelphia, PA 19104",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9076,
+            "longitude": -75.1228
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "name": "Dr. James Kim",
+      "specialty": "General Practice",
+      "category": "Primary Care",
+      "rating": 4.5,
+      "distance": 6.1,
+      "photo": "https://picsum.photos/seed/p4/200/200",
+      "inNetwork": false,
+      "address": "214 South St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9326,
+        "longitude": -75.1421
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 11:00 AM",
+      "yearsExperience": 19,
+      "bio": "Delivers comprehensive preventive care and chronic disease management with a patient-first philosophy.",
+      "locations": [
+        {
+          "name": "Main Hospital p4",
+          "address": "516 Market St, Philadelphia, PA 19102",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9491,
+            "longitude": -75.1517
+          }
+        },
+        {
+          "name": "City Clinic p4",
+          "address": "540 Chestnut St, Philadelphia, PA 19107",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9887,
+            "longitude": -75.1655
+          }
+        },
+        {
+          "name": "Westside Hub p4",
+          "address": "243 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9081,
+            "longitude": -75.139
+          }
+        },
+        {
+          "name": "Eastside Care p4",
+          "address": "829 Chestnut St, Philadelphia, PA 19146",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9196,
+            "longitude": -75.1455
+          }
+        },
+        {
+          "name": "North Annex p4",
+          "address": "711 Broad St, Philadelphia, PA 19146",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9772,
+            "longitude": -75.1791
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "name": "Dr. Patricia Walsh",
+      "specialty": "Family Medicine",
+      "category": "Primary Care",
+      "rating": 4.8,
+      "distance": 11.4,
+      "photo": "https://i.pravatar.cc/100?img=40",
+      "inNetwork": true,
+      "address": "197 Broad St, Philadelphia, PA 19123",
+      "coordinate": {
+        "latitude": 39.9676,
+        "longitude": -75.1347
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 3:30 PM",
+      "yearsExperience": 20,
+      "bio": "Delivers comprehensive preventive care and chronic disease management with a patient-first philosophy.",
+      "locations": [
+        {
+          "name": "Main Hospital p5",
+          "address": "294 Market St, Philadelphia, PA 19146",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9166,
+            "longitude": -75.1921
+          }
+        },
+        {
+          "name": "City Clinic p5",
+          "address": "305 Broad St, Philadelphia, PA 19147",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.925,
+            "longitude": -75.1217
+          }
+        },
+        {
+          "name": "Westside Hub p5",
+          "address": "899 Walnut St, Philadelphia, PA 19147",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9258,
+            "longitude": -75.2012
+          }
+        },
+        {
+          "name": "Eastside Care p5",
+          "address": "990 Chestnut St, Philadelphia, PA 19107",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9462,
+            "longitude": -75.1273
+          }
+        },
+        {
+          "name": "North Annex p5",
+          "address": "929 South St, Philadelphia, PA 19123",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.987,
+            "longitude": -75.146
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "name": "Dr. James Wilson",
+      "specialty": "Cardiology Specialist",
+      "category": "Cardiology",
+      "rating": 4.8,
+      "distance": 2.5,
+      "photo": "https://picsum.photos/seed/p6/200/200",
+      "inNetwork": true,
+      "address": "155 Walnut St, Philadelphia, PA 19123",
+      "coordinate": {
+        "latitude": 39.9819,
+        "longitude": -75.21
+      },
+      "languages": [
+        "English",
+        "Mandarin"
+      ],
+      "nextAvailable": "Wednesday, 9:30 AM",
+      "yearsExperience": 20,
+      "bio": "Expert in diagnosing and treating heart disease, arrhythmias, and cardiovascular risk reduction.",
+      "locations": [
+        {
+          "name": "Main Hospital p6",
+          "address": "453 Market St, Philadelphia, PA 19123",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9386,
+            "longitude": -75.1684
+          }
+        },
+        {
+          "name": "City Clinic p6",
+          "address": "519 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9429,
+            "longitude": -75.163
+          }
+        },
+        {
+          "name": "Westside Hub p6",
+          "address": "378 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9225,
+            "longitude": -75.1301
+          }
+        },
+        {
+          "name": "Eastside Care p6",
+          "address": "663 Broad St, Philadelphia, PA 19146",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9789,
+            "longitude": -75.1182
+          }
+        },
+        {
+          "name": "North Annex p6",
+          "address": "695 South St, Philadelphia, PA 19147",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.91,
+            "longitude": -75.1425
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p7",
+      "name": "Dr. David Park",
+      "specialty": "Interventional Cardiology",
+      "category": "Cardiology",
+      "rating": 4.6,
+      "distance": 4.8,
+      "photo": "https://picsum.photos/seed/p7/200/200",
+      "inNetwork": true,
+      "address": "145 South St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9311,
+        "longitude": -75.197
+      },
+      "languages": [
+        "English",
+        "Korean"
+      ],
+      "nextAvailable": "Wednesday, 2:00 PM",
+      "yearsExperience": 21,
+      "bio": "Expert in diagnosing and treating heart disease, arrhythmias, and cardiovascular risk reduction.",
+      "locations": [
+        {
+          "name": "Main Hospital p7",
+          "address": "663 Arch St, Philadelphia, PA 19104",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.937,
+            "longitude": -75.1537
+          }
+        },
+        {
+          "name": "City Clinic p7",
+          "address": "872 Chestnut St, Philadelphia, PA 19147",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9956,
+            "longitude": -75.184
+          }
+        },
+        {
+          "name": "Westside Hub p7",
+          "address": "864 South St, Philadelphia, PA 19123",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9736,
+            "longitude": -75.1628
+          }
+        },
+        {
+          "name": "Eastside Care p7",
+          "address": "284 Broad St, Philadelphia, PA 19104",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9605,
+            "longitude": -75.1997
+          }
+        },
+        {
+          "name": "North Annex p7",
+          "address": "192 Chestnut St, Philadelphia, PA 19147",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9404,
+            "longitude": -75.1351
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p8",
+      "name": "Dr. Anita Sharma",
+      "specialty": "Electrophysiology",
+      "category": "Cardiology",
+      "rating": 4.7,
+      "distance": 7.3,
+      "photo": "https://i.pravatar.cc/100?img=44",
+      "inNetwork": true,
+      "address": "573 Walnut St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9474,
+        "longitude": -75.215
+      },
+      "languages": [
+        "English",
+        "Russian"
+      ],
+      "nextAvailable": "Thursday, 10:30 AM",
+      "yearsExperience": 22,
+      "bio": "Expert in diagnosing and treating heart disease, arrhythmias, and cardiovascular risk reduction.",
+      "locations": [
+        {
+          "name": "Main Hospital p8",
+          "address": "479 Chestnut St, Philadelphia, PA 19102",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9157,
+            "longitude": -75.1228
+          }
+        },
+        {
+          "name": "City Clinic p8",
+          "address": "431 Arch St, Philadelphia, PA 19147",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.967,
+            "longitude": -75.1991
+          }
+        },
+        {
+          "name": "Westside Hub p8",
+          "address": "126 Market St, Philadelphia, PA 19146",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9791,
+            "longitude": -75.1912
+          }
+        },
+        {
+          "name": "Eastside Care p8",
+          "address": "750 Arch St, Philadelphia, PA 19107",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9944,
+            "longitude": -75.1322
+          }
+        },
+        {
+          "name": "North Annex p8",
+          "address": "402 Market St, Philadelphia, PA 19147",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9328,
+            "longitude": -75.1556
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p9",
+      "name": "Dr. Michael Torres",
+      "specialty": "Non-Invasive Cardiology",
+      "category": "Cardiology",
+      "rating": 4.5,
+      "distance": 13.2,
+      "photo": "https://i.pravatar.cc/100?img=11",
+      "inNetwork": false,
+      "address": "526 Broad St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9215,
+        "longitude": -75.2099
+      },
+      "languages": [
+        "English",
+        "French"
+      ],
+      "nextAvailable": "Friday, 9:00 AM",
+      "yearsExperience": 23,
+      "bio": "Expert in diagnosing and treating heart disease, arrhythmias, and cardiovascular risk reduction.",
+      "locations": [
+        {
+          "name": "Main Hospital p9",
+          "address": "507 Market St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9684,
+            "longitude": -75.1355
+          }
+        },
+        {
+          "name": "City Clinic p9",
+          "address": "443 Broad St, Philadelphia, PA 19107",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9434,
+            "longitude": -75.182
+          }
+        },
+        {
+          "name": "Westside Hub p9",
+          "address": "380 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9668,
+            "longitude": -75.1868
+          }
+        },
+        {
+          "name": "Eastside Care p9",
+          "address": "587 Broad St, Philadelphia, PA 19123",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9741,
+            "longitude": -75.1555
+          }
+        },
+        {
+          "name": "North Annex p9",
+          "address": "313 Chestnut St, Philadelphia, PA 19107",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9354,
+            "longitude": -75.1928
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "name": "Dr. Lisa Nakamura",
+      "specialty": "Cardiac Imaging",
+      "category": "Cardiology",
+      "rating": 4.4,
+      "distance": 18.6,
+      "photo": "https://i.pravatar.cc/100?img=47",
+      "inNetwork": true,
+      "address": "713 Walnut St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.933,
+        "longitude": -75.1625
+      },
+      "languages": [
+        "English",
+        "Spanish",
+        "Mandarin"
+      ],
+      "nextAvailable": null,
+      "yearsExperience": 24,
+      "bio": "Expert in diagnosing and treating heart disease, arrhythmias, and cardiovascular risk reduction.",
+      "locations": [
+        {
+          "name": "Main Hospital p10",
+          "address": "206 Chestnut St, Philadelphia, PA 19146",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9891,
+            "longitude": -75.1888
+          }
+        },
+        {
+          "name": "City Clinic p10",
+          "address": "172 Chestnut St, Philadelphia, PA 19147",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9379,
+            "longitude": -75.1315
+          }
+        },
+        {
+          "name": "Westside Hub p10",
+          "address": "350 Market St, Philadelphia, PA 19147",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9676,
+            "longitude": -75.144
+          }
+        },
+        {
+          "name": "Eastside Care p10",
+          "address": "562 Broad St, Philadelphia, PA 19123",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9414,
+            "longitude": -75.1566
+          }
+        },
+        {
+          "name": "North Annex p10",
+          "address": "214 South St, Philadelphia, PA 19146",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9626,
+            "longitude": -75.201
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "name": "Dr. Elena Rodriguez",
+      "specialty": "Internal Medicine",
+      "category": "Internal Medicine",
+      "rating": 4.7,
+      "distance": 1.9,
+      "photo": "https://i.pravatar.cc/100?img=48",
+      "inNetwork": true,
+      "address": "513 Broad St, Philadelphia, PA 19104",
+      "coordinate": {
+        "latitude": 39.9368,
+        "longitude": -75.1512
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 9:00 AM",
+      "yearsExperience": 13,
+      "bio": "Specializes in managing complex multi-system conditions with evidence-based, whole-person care.",
+      "locations": [
+        {
+          "name": "Main Hospital p11",
+          "address": "437 Market St, Philadelphia, PA 19146",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 40.0003,
+            "longitude": -75.2038
+          }
+        },
+        {
+          "name": "City Clinic p11",
+          "address": "380 South St, Philadelphia, PA 19123",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9685,
+            "longitude": -75.1848
+          }
+        },
+        {
+          "name": "Westside Hub p11",
+          "address": "688 Chestnut St, Philadelphia, PA 19107",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9939,
+            "longitude": -75.204
+          }
+        },
+        {
+          "name": "Eastside Care p11",
+          "address": "613 Broad St, Philadelphia, PA 19104",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9567,
+            "longitude": -75.2091
+          }
+        },
+        {
+          "name": "North Annex p11",
+          "address": "821 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9686,
+            "longitude": -75.1391
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "name": "Dr. Thomas Hayes",
+      "specialty": "Hospital Medicine",
+      "category": "Internal Medicine",
+      "rating": 4.5,
+      "distance": 3.7,
+      "photo": "https://i.pravatar.cc/100?img=13",
+      "inNetwork": true,
+      "address": "295 Walnut St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9775,
+        "longitude": -75.1688
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 2:30 PM",
+      "yearsExperience": 14,
+      "bio": "Specializes in managing complex multi-system conditions with evidence-based, whole-person care.",
+      "locations": [
+        {
+          "name": "Main Hospital p12",
+          "address": "251 South St, Philadelphia, PA 19102",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9441,
+            "longitude": -75.146
+          }
+        },
+        {
+          "name": "City Clinic p12",
+          "address": "892 Arch St, Philadelphia, PA 19107",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9912,
+            "longitude": -75.1538
+          }
+        },
+        {
+          "name": "Westside Hub p12",
+          "address": "432 Arch St, Philadelphia, PA 19104",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 40.0018,
+            "longitude": -75.1838
+          }
+        },
+        {
+          "name": "Eastside Care p12",
+          "address": "668 Walnut St, Philadelphia, PA 19107",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9356,
+            "longitude": -75.1305
+          }
+        },
+        {
+          "name": "North Annex p12",
+          "address": "158 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9952,
+            "longitude": -75.2028
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "name": "Dr. Priya Patel",
+      "specialty": "Geriatric Medicine",
+      "category": "Internal Medicine",
+      "rating": 4.6,
+      "distance": 5.5,
+      "photo": "https://i.pravatar.cc/100?img=50",
+      "inNetwork": true,
+      "address": "593 Arch St, Philadelphia, PA 19123",
+      "coordinate": {
+        "latitude": 39.9563,
+        "longitude": -75.2088
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Monday, 10:00 AM",
+      "yearsExperience": 15,
+      "bio": "Specializes in managing complex multi-system conditions with evidence-based, whole-person care.",
+      "locations": [
+        {
+          "name": "Main Hospital p13",
+          "address": "252 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9308,
+            "longitude": -75.1321
+          }
+        },
+        {
+          "name": "City Clinic p13",
+          "address": "626 Broad St, Philadelphia, PA 19104",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9161,
+            "longitude": -75.1689
+          }
+        },
+        {
+          "name": "Westside Hub p13",
+          "address": "671 Chestnut St, Philadelphia, PA 19146",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9064,
+            "longitude": -75.1729
+          }
+        },
+        {
+          "name": "Eastside Care p13",
+          "address": "696 Market St, Philadelphia, PA 19146",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9485,
+            "longitude": -75.14
+          }
+        },
+        {
+          "name": "North Annex p13",
+          "address": "345 Walnut St, Philadelphia, PA 19102",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9395,
+            "longitude": -75.143
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p14",
+      "name": "Dr. Christopher Lee",
+      "specialty": "Critical Care Medicine",
+      "category": "Internal Medicine",
+      "rating": 4.4,
+      "distance": 9.8,
+      "photo": "https://i.pravatar.cc/100?img=15",
+      "inNetwork": false,
+      "address": "348 Market St, Philadelphia, PA 19102",
+      "coordinate": {
+        "latitude": 39.9676,
+        "longitude": -75.1887
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 11:00 AM",
+      "yearsExperience": 16,
+      "bio": "Specializes in managing complex multi-system conditions with evidence-based, whole-person care.",
+      "locations": [
+        {
+          "name": "Main Hospital p14",
+          "address": "538 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9771,
+            "longitude": -75.209
+          }
+        },
+        {
+          "name": "City Clinic p14",
+          "address": "737 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.95,
+            "longitude": -75.1924
+          }
+        },
+        {
+          "name": "Westside Hub p14",
+          "address": "873 South St, Philadelphia, PA 19147",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9848,
+            "longitude": -75.1623
+          }
+        },
+        {
+          "name": "Eastside Care p14",
+          "address": "681 Chestnut St, Philadelphia, PA 19147",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9929,
+            "longitude": -75.1661
+          }
+        },
+        {
+          "name": "North Annex p14",
+          "address": "227 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9123,
+            "longitude": -75.2086
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p15",
+      "name": "Dr. Amanda Foster",
+      "specialty": "Internal Medicine",
+      "category": "Internal Medicine",
+      "rating": 4.8,
+      "distance": 15.3,
+      "photo": "https://i.pravatar.cc/100?img=52",
+      "inNetwork": true,
+      "address": "454 Chestnut St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9828,
+        "longitude": -75.1761
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 3:30 PM",
+      "yearsExperience": 17,
+      "bio": "Specializes in managing complex multi-system conditions with evidence-based, whole-person care.",
+      "locations": [
+        {
+          "name": "Main Hospital p15",
+          "address": "644 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9437,
+            "longitude": -75.1863
+          }
+        },
+        {
+          "name": "City Clinic p15",
+          "address": "670 Broad St, Philadelphia, PA 19147",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9822,
+            "longitude": -75.1375
+          }
+        },
+        {
+          "name": "Westside Hub p15",
+          "address": "910 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9695,
+            "longitude": -75.1481
+          }
+        },
+        {
+          "name": "Eastside Care p15",
+          "address": "581 Chestnut St, Philadelphia, PA 19147",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9735,
+            "longitude": -75.1488
+          }
+        },
+        {
+          "name": "North Annex p15",
+          "address": "182 Walnut St, Philadelphia, PA 19102",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.925,
+            "longitude": -75.2023
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "name": "Dr. Kevin Martinez",
+      "specialty": "Sports Rehabilitation",
+      "category": "Physical Therapy",
+      "rating": 4.8,
+      "distance": 1.2,
+      "photo": "https://i.pravatar.cc/100?img=17",
+      "inNetwork": true,
+      "address": "126 South St, Philadelphia, PA 19107",
+      "coordinate": {
+        "latitude": 39.9953,
+        "longitude": -75.1222
+      },
+      "languages": [
+        "English",
+        "Mandarin"
+      ],
+      "nextAvailable": "Wednesday, 9:30 AM",
+      "yearsExperience": 8,
+      "bio": "Focuses on restoring mobility and function through individualized rehabilitation programs.",
+      "locations": [
+        {
+          "name": "Main Hospital p16",
+          "address": "548 Broad St, Philadelphia, PA 19104",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9426,
+            "longitude": -75.1539
+          }
+        },
+        {
+          "name": "City Clinic p16",
+          "address": "307 South St, Philadelphia, PA 19102",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9331,
+            "longitude": -75.1561
+          }
+        },
+        {
+          "name": "Westside Hub p16",
+          "address": "910 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9646,
+            "longitude": -75.1361
+          }
+        },
+        {
+          "name": "Eastside Care p16",
+          "address": "296 Broad St, Philadelphia, PA 19147",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9533,
+            "longitude": -75.1536
+          }
+        },
+        {
+          "name": "North Annex p16",
+          "address": "517 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9425,
+            "longitude": -75.202
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p17",
+      "name": "Dr. Rachel Green",
+      "specialty": "Orthopedic Physical Therapy",
+      "category": "Physical Therapy",
+      "rating": 4.9,
+      "distance": 2.8,
+      "photo": "https://i.pravatar.cc/100?img=53",
+      "inNetwork": true,
+      "address": "393 Chestnut St, Philadelphia, PA 19102",
+      "coordinate": {
+        "latitude": 39.9625,
+        "longitude": -75.1376
+      },
+      "languages": [
+        "English",
+        "Korean"
+      ],
+      "nextAvailable": "Wednesday, 2:00 PM",
+      "yearsExperience": 9,
+      "bio": "Focuses on restoring mobility and function through individualized rehabilitation programs.",
+      "locations": [
+        {
+          "name": "Main Hospital p17",
+          "address": "253 South St, Philadelphia, PA 19102",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9752,
+            "longitude": -75.1802
+          }
+        },
+        {
+          "name": "City Clinic p17",
+          "address": "747 Arch St, Philadelphia, PA 19104",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9866,
+            "longitude": -75.1203
+          }
+        },
+        {
+          "name": "Westside Hub p17",
+          "address": "885 Broad St, Philadelphia, PA 19107",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9217,
+            "longitude": -75.2128
+          }
+        },
+        {
+          "name": "Eastside Care p17",
+          "address": "991 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9657,
+            "longitude": -75.1369
+          }
+        },
+        {
+          "name": "North Annex p17",
+          "address": "270 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9284,
+            "longitude": -75.1662
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p18",
+      "name": "Dr. Daniel Nguyen",
+      "specialty": "Neurological Rehab",
+      "category": "Physical Therapy",
+      "rating": 4.5,
+      "distance": 4.4,
+      "photo": "https://i.pravatar.cc/100?img=19",
+      "inNetwork": true,
+      "address": "641 Arch St, Philadelphia, PA 19107",
+      "coordinate": {
+        "latitude": 39.9518,
+        "longitude": -75.1555
+      },
+      "languages": [
+        "English",
+        "Russian"
+      ],
+      "nextAvailable": "Thursday, 10:30 AM",
+      "yearsExperience": 10,
+      "bio": "Focuses on restoring mobility and function through individualized rehabilitation programs.",
+      "locations": [
+        {
+          "name": "Main Hospital p18",
+          "address": "885 Market St, Philadelphia, PA 19102",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9351,
+            "longitude": -75.196
+          }
+        },
+        {
+          "name": "City Clinic p18",
+          "address": "243 Market St, Philadelphia, PA 19146",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9758,
+            "longitude": -75.1167
+          }
+        },
+        {
+          "name": "Westside Hub p18",
+          "address": "536 Chestnut St, Philadelphia, PA 19107",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 40.0005,
+            "longitude": -75.1547
+          }
+        },
+        {
+          "name": "Eastside Care p18",
+          "address": "474 South St, Philadelphia, PA 19146",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9217,
+            "longitude": -75.1761
+          }
+        },
+        {
+          "name": "North Annex p18",
+          "address": "905 Arch St, Philadelphia, PA 19107",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.913,
+            "longitude": -75.1723
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p19",
+      "name": "Dr. Sophia Patel",
+      "specialty": "Pediatric PT",
+      "category": "Physical Therapy",
+      "rating": 4.7,
+      "distance": 8.1,
+      "photo": "https://i.pravatar.cc/100?img=55",
+      "inNetwork": true,
+      "address": "766 Broad St, Philadelphia, PA 19123",
+      "coordinate": {
+        "latitude": 39.9412,
+        "longitude": -75.1453
+      },
+      "languages": [
+        "English",
+        "French"
+      ],
+      "nextAvailable": "Friday, 9:00 AM",
+      "yearsExperience": 11,
+      "bio": "Focuses on restoring mobility and function through individualized rehabilitation programs.",
+      "locations": [
+        {
+          "name": "Main Hospital p19",
+          "address": "645 Walnut St, Philadelphia, PA 19146",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9869,
+            "longitude": -75.1901
+          }
+        },
+        {
+          "name": "City Clinic p19",
+          "address": "531 Broad St, Philadelphia, PA 19147",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 40.0006,
+            "longitude": -75.1877
+          }
+        },
+        {
+          "name": "Westside Hub p19",
+          "address": "882 South St, Philadelphia, PA 19146",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9974,
+            "longitude": -75.1773
+          }
+        },
+        {
+          "name": "Eastside Care p19",
+          "address": "607 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9878,
+            "longitude": -75.1216
+          }
+        },
+        {
+          "name": "North Annex p19",
+          "address": "735 Arch St, Philadelphia, PA 19147",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.98,
+            "longitude": -75.2004
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p20",
+      "name": "Dr. Marcus Johnson",
+      "specialty": "Aquatic Therapy",
+      "category": "Physical Therapy",
+      "rating": 4.3,
+      "distance": 16.7,
+      "photo": "https://i.pravatar.cc/100?img=21",
+      "inNetwork": false,
+      "address": "654 Walnut St, Philadelphia, PA 19102",
+      "coordinate": {
+        "latitude": 39.9681,
+        "longitude": -75.1704
+      },
+      "languages": [
+        "English",
+        "Spanish",
+        "Mandarin"
+      ],
+      "nextAvailable": null,
+      "yearsExperience": 12,
+      "bio": "Focuses on restoring mobility and function through individualized rehabilitation programs.",
+      "locations": [
+        {
+          "name": "Main Hospital p20",
+          "address": "709 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9413,
+            "longitude": -75.1904
+          }
+        },
+        {
+          "name": "City Clinic p20",
+          "address": "972 South St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9149,
+            "longitude": -75.1212
+          }
+        },
+        {
+          "name": "Westside Hub p20",
+          "address": "312 Broad St, Philadelphia, PA 19146",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9578,
+            "longitude": -75.15
+          }
+        },
+        {
+          "name": "Eastside Care p20",
+          "address": "863 Arch St, Philadelphia, PA 19123",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9273,
+            "longitude": -75.1797
+          }
+        },
+        {
+          "name": "North Annex p20",
+          "address": "415 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9937,
+            "longitude": -75.1401
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p21",
+      "name": "Dr. Jennifer Wu",
+      "specialty": "Medical Dermatology",
+      "category": "Dermatology",
+      "rating": 5,
+      "distance": 0.6,
+      "photo": "https://i.pravatar.cc/100?img=56",
+      "inNetwork": true,
+      "address": "226 Market St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9229,
+        "longitude": -75.1271
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 9:00 AM",
+      "yearsExperience": 12,
+      "bio": "Provides expert care for skin, hair, and nail conditions with a focus on early detection.",
+      "locations": [
+        {
+          "name": "Main Hospital p21",
+          "address": "447 Chestnut St, Philadelphia, PA 19104",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9985,
+            "longitude": -75.1303
+          }
+        },
+        {
+          "name": "City Clinic p21",
+          "address": "300 Chestnut St, Philadelphia, PA 19123",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9107,
+            "longitude": -75.1553
+          }
+        },
+        {
+          "name": "Westside Hub p21",
+          "address": "835 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9532,
+            "longitude": -75.1945
+          }
+        },
+        {
+          "name": "Eastside Care p21",
+          "address": "752 Chestnut St, Philadelphia, PA 19146",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9249,
+            "longitude": -75.162
+          }
+        },
+        {
+          "name": "North Annex p21",
+          "address": "298 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9545,
+            "longitude": -75.2111
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p22",
+      "name": "Dr. Steven Brooks",
+      "specialty": "Cosmetic Dermatology",
+      "category": "Dermatology",
+      "rating": 4.6,
+      "distance": 3.1,
+      "photo": "https://i.pravatar.cc/100?img=23",
+      "inNetwork": true,
+      "address": "612 Broad St, Philadelphia, PA 19123",
+      "coordinate": {
+        "latitude": 39.9479,
+        "longitude": -75.1682
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 2:30 PM",
+      "yearsExperience": 13,
+      "bio": "Provides expert care for skin, hair, and nail conditions with a focus on early detection.",
+      "locations": [
+        {
+          "name": "Main Hospital p22",
+          "address": "344 Market St, Philadelphia, PA 19147",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9249,
+            "longitude": -75.214
+          }
+        },
+        {
+          "name": "City Clinic p22",
+          "address": "597 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.967,
+            "longitude": -75.188
+          }
+        },
+        {
+          "name": "Westside Hub p22",
+          "address": "128 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9248,
+            "longitude": -75.1848
+          }
+        },
+        {
+          "name": "Eastside Care p22",
+          "address": "140 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9093,
+            "longitude": -75.1181
+          }
+        },
+        {
+          "name": "North Annex p22",
+          "address": "664 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9201,
+            "longitude": -75.1792
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p23",
+      "name": "Dr. Carmen Diaz",
+      "specialty": "Pediatric Dermatology",
+      "category": "Dermatology",
+      "rating": 4.7,
+      "distance": 5.8,
+      "photo": "https://i.pravatar.cc/100?img=58",
+      "inNetwork": true,
+      "address": "822 Arch St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9572,
+        "longitude": -75.1962
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Monday, 10:00 AM",
+      "yearsExperience": 14,
+      "bio": "Provides expert care for skin, hair, and nail conditions with a focus on early detection.",
+      "locations": [
+        {
+          "name": "Main Hospital p23",
+          "address": "974 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9253,
+            "longitude": -75.2084
+          }
+        },
+        {
+          "name": "City Clinic p23",
+          "address": "436 Arch St, Philadelphia, PA 19104",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9791,
+            "longitude": -75.1696
+          }
+        },
+        {
+          "name": "Westside Hub p23",
+          "address": "362 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9653,
+            "longitude": -75.1305
+          }
+        },
+        {
+          "name": "Eastside Care p23",
+          "address": "528 Chestnut St, Philadelphia, PA 19102",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9114,
+            "longitude": -75.1565
+          }
+        },
+        {
+          "name": "North Annex p23",
+          "address": "475 Arch St, Philadelphia, PA 19147",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9951,
+            "longitude": -75.1223
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p24",
+      "name": "Dr. Andrew Kim",
+      "specialty": "Surgical Dermatology",
+      "category": "Dermatology",
+      "rating": 4.4,
+      "distance": 10.4,
+      "photo": "https://i.pravatar.cc/100?img=25",
+      "inNetwork": false,
+      "address": "976 Walnut St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9055,
+        "longitude": -75.1574
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 11:00 AM",
+      "yearsExperience": 15,
+      "bio": "Provides expert care for skin, hair, and nail conditions with a focus on early detection.",
+      "locations": [
+        {
+          "name": "Main Hospital p24",
+          "address": "656 South St, Philadelphia, PA 19123",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9332,
+            "longitude": -75.2045
+          }
+        },
+        {
+          "name": "City Clinic p24",
+          "address": "137 South St, Philadelphia, PA 19104",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.925,
+            "longitude": -75.1758
+          }
+        },
+        {
+          "name": "Westside Hub p24",
+          "address": "598 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9651,
+            "longitude": -75.1572
+          }
+        },
+        {
+          "name": "Eastside Care p24",
+          "address": "328 Walnut St, Philadelphia, PA 19102",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9898,
+            "longitude": -75.1836
+          }
+        },
+        {
+          "name": "North Annex p24",
+          "address": "884 South St, Philadelphia, PA 19123",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9922,
+            "longitude": -75.153
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p25",
+      "name": "Dr. Nicole Thompson",
+      "specialty": "Mohs Surgery",
+      "category": "Dermatology",
+      "rating": 4.5,
+      "distance": 22.5,
+      "photo": "https://i.pravatar.cc/100?img=60",
+      "inNetwork": true,
+      "address": "728 Arch St, Philadelphia, PA 19102",
+      "coordinate": {
+        "latitude": 39.9256,
+        "longitude": -75.1157
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 3:30 PM",
+      "yearsExperience": 16,
+      "bio": "Provides expert care for skin, hair, and nail conditions with a focus on early detection.",
+      "locations": [
+        {
+          "name": "Main Hospital p25",
+          "address": "307 Broad St, Philadelphia, PA 19123",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9577,
+            "longitude": -75.2117
+          }
+        },
+        {
+          "name": "City Clinic p25",
+          "address": "595 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9965,
+            "longitude": -75.1565
+          }
+        },
+        {
+          "name": "Westside Hub p25",
+          "address": "581 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9706,
+            "longitude": -75.1601
+          }
+        },
+        {
+          "name": "Eastside Care p25",
+          "address": "525 Arch St, Philadelphia, PA 19107",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9331,
+            "longitude": -75.2117
+          }
+        },
+        {
+          "name": "North Annex p25",
+          "address": "287 Chestnut St, Philadelphia, PA 19147",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9687,
+            "longitude": -75.2039
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p26",
+      "name": "Dr. Richard Scott",
+      "specialty": "Joint Replacement",
+      "category": "Orthopedics",
+      "rating": 4.6,
+      "distance": 1.7,
+      "photo": "https://i.pravatar.cc/100?img=27",
+      "inNetwork": true,
+      "address": "389 South St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9829,
+        "longitude": -75.1522
+      },
+      "languages": [
+        "English",
+        "Mandarin"
+      ],
+      "nextAvailable": "Wednesday, 9:30 AM",
+      "yearsExperience": 18,
+      "bio": "Specializes in musculoskeletal conditions, joint replacement, and sports-related injuries.",
+      "locations": [
+        {
+          "name": "Main Hospital p26",
+          "address": "239 Broad St, Philadelphia, PA 19104",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9731,
+            "longitude": -75.1853
+          }
+        },
+        {
+          "name": "City Clinic p26",
+          "address": "197 Market St, Philadelphia, PA 19146",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9372,
+            "longitude": -75.155
+          }
+        },
+        {
+          "name": "Westside Hub p26",
+          "address": "613 South St, Philadelphia, PA 19104",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9028,
+            "longitude": -75.1253
+          }
+        },
+        {
+          "name": "Eastside Care p26",
+          "address": "431 Chestnut St, Philadelphia, PA 19102",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9479,
+            "longitude": -75.1687
+          }
+        },
+        {
+          "name": "North Annex p26",
+          "address": "368 Walnut St, Philadelphia, PA 19107",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9707,
+            "longitude": -75.1581
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p27",
+      "name": "Dr. Hannah Lee",
+      "specialty": "Sports Medicine",
+      "category": "Orthopedics",
+      "rating": 4.8,
+      "distance": 4.2,
+      "photo": "https://i.pravatar.cc/100?img=61",
+      "inNetwork": true,
+      "address": "514 South St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9673,
+        "longitude": -75.1506
+      },
+      "languages": [
+        "English",
+        "Korean"
+      ],
+      "nextAvailable": "Wednesday, 2:00 PM",
+      "yearsExperience": 19,
+      "bio": "Specializes in musculoskeletal conditions, joint replacement, and sports-related injuries.",
+      "locations": [
+        {
+          "name": "Main Hospital p27",
+          "address": "461 Market St, Philadelphia, PA 19107",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9655,
+            "longitude": -75.1857
+          }
+        },
+        {
+          "name": "City Clinic p27",
+          "address": "747 Market St, Philadelphia, PA 19123",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9448,
+            "longitude": -75.202
+          }
+        },
+        {
+          "name": "Westside Hub p27",
+          "address": "630 Chestnut St, Philadelphia, PA 19147",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 40.0026,
+            "longitude": -75.1363
+          }
+        },
+        {
+          "name": "Eastside Care p27",
+          "address": "383 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9966,
+            "longitude": -75.1269
+          }
+        },
+        {
+          "name": "North Annex p27",
+          "address": "377 Walnut St, Philadelphia, PA 19146",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9097,
+            "longitude": -75.1684
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p28",
+      "name": "Dr. Carlos Rivera",
+      "specialty": "Spine Surgery",
+      "category": "Orthopedics",
+      "rating": 4.5,
+      "distance": 7.9,
+      "photo": "https://i.pravatar.cc/100?img=29",
+      "inNetwork": true,
+      "address": "914 Broad St, Philadelphia, PA 19107",
+      "coordinate": {
+        "latitude": 39.977,
+        "longitude": -75.1871
+      },
+      "languages": [
+        "English",
+        "Russian"
+      ],
+      "nextAvailable": "Thursday, 10:30 AM",
+      "yearsExperience": 20,
+      "bio": "Specializes in musculoskeletal conditions, joint replacement, and sports-related injuries.",
+      "locations": [
+        {
+          "name": "Main Hospital p28",
+          "address": "222 Broad St, Philadelphia, PA 19107",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9381,
+            "longitude": -75.1269
+          }
+        },
+        {
+          "name": "City Clinic p28",
+          "address": "529 Chestnut St, Philadelphia, PA 19104",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.959,
+            "longitude": -75.1235
+          }
+        },
+        {
+          "name": "Westside Hub p28",
+          "address": "728 Broad St, Philadelphia, PA 19104",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9984,
+            "longitude": -75.1417
+          }
+        },
+        {
+          "name": "Eastside Care p28",
+          "address": "636 Broad St, Philadelphia, PA 19104",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9046,
+            "longitude": -75.2062
+          }
+        },
+        {
+          "name": "North Annex p28",
+          "address": "893 Market St, Philadelphia, PA 19104",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.98,
+            "longitude": -75.2034
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p29",
+      "name": "Dr. Emily Watson",
+      "specialty": "Hand Surgery",
+      "category": "Orthopedics",
+      "rating": 4.7,
+      "distance": 12.6,
+      "photo": "https://i.pravatar.cc/100?img=63",
+      "inNetwork": true,
+      "address": "206 Walnut St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9616,
+        "longitude": -75.1407
+      },
+      "languages": [
+        "English",
+        "French"
+      ],
+      "nextAvailable": "Friday, 9:00 AM",
+      "yearsExperience": 21,
+      "bio": "Specializes in musculoskeletal conditions, joint replacement, and sports-related injuries.",
+      "locations": [
+        {
+          "name": "Main Hospital p29",
+          "address": "249 Market St, Philadelphia, PA 19102",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.907,
+            "longitude": -75.2018
+          }
+        },
+        {
+          "name": "City Clinic p29",
+          "address": "867 Walnut St, Philadelphia, PA 19102",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.937,
+            "longitude": -75.2056
+          }
+        },
+        {
+          "name": "Westside Hub p29",
+          "address": "351 Chestnut St, Philadelphia, PA 19123",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9961,
+            "longitude": -75.1692
+          }
+        },
+        {
+          "name": "Eastside Care p29",
+          "address": "369 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9804,
+            "longitude": -75.191
+          }
+        },
+        {
+          "name": "North Annex p29",
+          "address": "702 Arch St, Philadelphia, PA 19147",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9501,
+            "longitude": -75.194
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p30",
+      "name": "Dr. Frank Liu",
+      "specialty": "Foot & Ankle Surgery",
+      "category": "Orthopedics",
+      "rating": 4.3,
+      "distance": 19.3,
+      "photo": "https://i.pravatar.cc/100?img=31",
+      "inNetwork": false,
+      "address": "555 Market St, Philadelphia, PA 19102",
+      "coordinate": {
+        "latitude": 39.9584,
+        "longitude": -75.1508
+      },
+      "languages": [
+        "English",
+        "Spanish",
+        "Mandarin"
+      ],
+      "nextAvailable": null,
+      "yearsExperience": 22,
+      "bio": "Specializes in musculoskeletal conditions, joint replacement, and sports-related injuries.",
+      "locations": [
+        {
+          "name": "Main Hospital p30",
+          "address": "232 Market St, Philadelphia, PA 19123",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9842,
+            "longitude": -75.1903
+          }
+        },
+        {
+          "name": "City Clinic p30",
+          "address": "973 Market St, Philadelphia, PA 19146",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9362,
+            "longitude": -75.1609
+          }
+        },
+        {
+          "name": "Westside Hub p30",
+          "address": "738 Arch St, Philadelphia, PA 19147",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9739,
+            "longitude": -75.1561
+          }
+        },
+        {
+          "name": "Eastside Care p30",
+          "address": "347 South St, Philadelphia, PA 19104",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9123,
+            "longitude": -75.1364
+          }
+        },
+        {
+          "name": "North Annex p30",
+          "address": "839 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9256,
+            "longitude": -75.2019
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p31",
+      "name": "Dr. Grace Chen",
+      "specialty": "Movement Disorders",
+      "category": "Neurology",
+      "rating": 4.9,
+      "distance": 2.3,
+      "photo": "https://i.pravatar.cc/100?img=64",
+      "inNetwork": true,
+      "address": "250 Broad St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9293,
+        "longitude": -75.1232
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 9:00 AM",
+      "yearsExperience": 15,
+      "bio": "Diagnoses and manages disorders of the brain, spinal cord, and peripheral nervous system.",
+      "locations": [
+        {
+          "name": "Main Hospital p31",
+          "address": "440 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9944,
+            "longitude": -75.2004
+          }
+        },
+        {
+          "name": "City Clinic p31",
+          "address": "724 South St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9753,
+            "longitude": -75.1642
+          }
+        },
+        {
+          "name": "Westside Hub p31",
+          "address": "201 Market St, Philadelphia, PA 19146",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9929,
+            "longitude": -75.1823
+          }
+        },
+        {
+          "name": "Eastside Care p31",
+          "address": "727 Arch St, Philadelphia, PA 19123",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9836,
+            "longitude": -75.1331
+          }
+        },
+        {
+          "name": "North Annex p31",
+          "address": "236 South St, Philadelphia, PA 19104",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9221,
+            "longitude": -75.1589
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p32",
+      "name": "Dr. Timothy Brown",
+      "specialty": "Epilepsy",
+      "category": "Neurology",
+      "rating": 4.6,
+      "distance": 4.9,
+      "photo": "https://i.pravatar.cc/100?img=33",
+      "inNetwork": true,
+      "address": "606 Walnut St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9154,
+        "longitude": -75.2029
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 2:30 PM",
+      "yearsExperience": 16,
+      "bio": "Diagnoses and manages disorders of the brain, spinal cord, and peripheral nervous system.",
+      "locations": [
+        {
+          "name": "Main Hospital p32",
+          "address": "621 Broad St, Philadelphia, PA 19107",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9938,
+            "longitude": -75.1723
+          }
+        },
+        {
+          "name": "City Clinic p32",
+          "address": "572 Broad St, Philadelphia, PA 19104",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9863,
+            "longitude": -75.1861
+          }
+        },
+        {
+          "name": "Westside Hub p32",
+          "address": "533 Arch St, Philadelphia, PA 19147",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.971,
+            "longitude": -75.1501
+          }
+        },
+        {
+          "name": "Eastside Care p32",
+          "address": "331 Walnut St, Philadelphia, PA 19107",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.927,
+            "longitude": -75.1893
+          }
+        },
+        {
+          "name": "North Annex p32",
+          "address": "411 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9567,
+            "longitude": -75.1519
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p33",
+      "name": "Dr. Diana Lopez",
+      "specialty": "Headache Medicine",
+      "category": "Neurology",
+      "rating": 4.7,
+      "distance": 8.6,
+      "photo": "https://i.pravatar.cc/100?img=65",
+      "inNetwork": true,
+      "address": "967 South St, Philadelphia, PA 19102",
+      "coordinate": {
+        "latitude": 39.9218,
+        "longitude": -75.2122
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Monday, 10:00 AM",
+      "yearsExperience": 17,
+      "bio": "Diagnoses and manages disorders of the brain, spinal cord, and peripheral nervous system.",
+      "locations": [
+        {
+          "name": "Main Hospital p33",
+          "address": "475 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9302,
+            "longitude": -75.1861
+          }
+        },
+        {
+          "name": "City Clinic p33",
+          "address": "219 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9879,
+            "longitude": -75.208
+          }
+        },
+        {
+          "name": "Westside Hub p33",
+          "address": "174 Arch St, Philadelphia, PA 19123",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9727,
+            "longitude": -75.214
+          }
+        },
+        {
+          "name": "Eastside Care p33",
+          "address": "174 Chestnut St, Philadelphia, PA 19123",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9109,
+            "longitude": -75.1756
+          }
+        },
+        {
+          "name": "North Annex p33",
+          "address": "478 Broad St, Philadelphia, PA 19123",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9167,
+            "longitude": -75.1466
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p34",
+      "name": "Dr. Matthew Singh",
+      "specialty": "Neuromuscular Disease",
+      "category": "Neurology",
+      "rating": 4.5,
+      "distance": 14.1,
+      "photo": "https://i.pravatar.cc/100?img=35",
+      "inNetwork": true,
+      "address": "919 Chestnut St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9779,
+        "longitude": -75.1675
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 11:00 AM",
+      "yearsExperience": 18,
+      "bio": "Diagnoses and manages disorders of the brain, spinal cord, and peripheral nervous system.",
+      "locations": [
+        {
+          "name": "Main Hospital p34",
+          "address": "398 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9284,
+            "longitude": -75.1764
+          }
+        },
+        {
+          "name": "City Clinic p34",
+          "address": "109 Arch St, Philadelphia, PA 19147",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9918,
+            "longitude": -75.1932
+          }
+        },
+        {
+          "name": "Westside Hub p34",
+          "address": "707 South St, Philadelphia, PA 19123",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.925,
+            "longitude": -75.1886
+          }
+        },
+        {
+          "name": "Eastside Care p34",
+          "address": "369 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9147,
+            "longitude": -75.2122
+          }
+        },
+        {
+          "name": "North Annex p34",
+          "address": "122 South St, Philadelphia, PA 19147",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9073,
+            "longitude": -75.1498
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p35",
+      "name": "Dr. Laura Kim",
+      "specialty": "Sleep Medicine",
+      "category": "Neurology",
+      "rating": 4.4,
+      "distance": 21.8,
+      "photo": "https://i.pravatar.cc/100?img=66",
+      "inNetwork": false,
+      "address": "809 Arch St, Philadelphia, PA 19104",
+      "coordinate": {
+        "latitude": 39.9623,
+        "longitude": -75.1396
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 3:30 PM",
+      "yearsExperience": 19,
+      "bio": "Diagnoses and manages disorders of the brain, spinal cord, and peripheral nervous system.",
+      "locations": [
+        {
+          "name": "Main Hospital p35",
+          "address": "187 Chestnut St, Philadelphia, PA 19107",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9146,
+            "longitude": -75.1601
+          }
+        },
+        {
+          "name": "City Clinic p35",
+          "address": "490 Market St, Philadelphia, PA 19102",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9307,
+            "longitude": -75.125
+          }
+        },
+        {
+          "name": "Westside Hub p35",
+          "address": "445 Walnut St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.979,
+            "longitude": -75.1321
+          }
+        },
+        {
+          "name": "Eastside Care p35",
+          "address": "568 Market St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9348,
+            "longitude": -75.1402
+          }
+        },
+        {
+          "name": "North Annex p35",
+          "address": "652 Market St, Philadelphia, PA 19147",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9527,
+            "longitude": -75.2114
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p36",
+      "name": "Dr. Brian Taylor",
+      "specialty": "Advanced Endoscopy",
+      "category": "Gastroenterology",
+      "rating": 4.5,
+      "distance": 3.4,
+      "photo": "https://i.pravatar.cc/100?img=2",
+      "inNetwork": true,
+      "address": "652 Chestnut St, Philadelphia, PA 19123",
+      "coordinate": {
+        "latitude": 39.9294,
+        "longitude": -75.21
+      },
+      "languages": [
+        "English",
+        "Mandarin"
+      ],
+      "nextAvailable": "Wednesday, 9:30 AM",
+      "yearsExperience": 10,
+      "bio": "Expert in digestive health, including endoscopy, liver disease, and inflammatory bowel conditions.",
+      "locations": [
+        {
+          "name": "Main Hospital p36",
+          "address": "633 South St, Philadelphia, PA 19147",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9591,
+            "longitude": -75.2081
+          }
+        },
+        {
+          "name": "City Clinic p36",
+          "address": "666 Broad St, Philadelphia, PA 19107",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9986,
+            "longitude": -75.1695
+          }
+        },
+        {
+          "name": "Westside Hub p36",
+          "address": "946 Arch St, Philadelphia, PA 19104",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9208,
+            "longitude": -75.1172
+          }
+        },
+        {
+          "name": "Eastside Care p36",
+          "address": "512 South St, Philadelphia, PA 19147",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9842,
+            "longitude": -75.1806
+          }
+        },
+        {
+          "name": "North Annex p36",
+          "address": "872 Broad St, Philadelphia, PA 19146",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9943,
+            "longitude": -75.1582
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p37",
+      "name": "Dr. Susan Rao",
+      "specialty": "Hepatology",
+      "category": "Gastroenterology",
+      "rating": 4.7,
+      "distance": 5.2,
+      "photo": "https://i.pravatar.cc/100?img=67",
+      "inNetwork": true,
+      "address": "213 Market St, Philadelphia, PA 19107",
+      "coordinate": {
+        "latitude": 39.903,
+        "longitude": -75.1764
+      },
+      "languages": [
+        "English",
+        "Korean"
+      ],
+      "nextAvailable": "Wednesday, 2:00 PM",
+      "yearsExperience": 11,
+      "bio": "Expert in digestive health, including endoscopy, liver disease, and inflammatory bowel conditions.",
+      "locations": [
+        {
+          "name": "Main Hospital p37",
+          "address": "671 Walnut St, Philadelphia, PA 19107",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9858,
+            "longitude": -75.1255
+          }
+        },
+        {
+          "name": "City Clinic p37",
+          "address": "850 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.97,
+            "longitude": -75.1446
+          }
+        },
+        {
+          "name": "Westside Hub p37",
+          "address": "459 Chestnut St, Philadelphia, PA 19123",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9311,
+            "longitude": -75.1748
+          }
+        },
+        {
+          "name": "Eastside Care p37",
+          "address": "941 Market St, Philadelphia, PA 19147",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9055,
+            "longitude": -75.2148
+          }
+        },
+        {
+          "name": "North Annex p37",
+          "address": "599 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9103,
+            "longitude": -75.1632
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p38",
+      "name": "Dr. Kenneth Park",
+      "specialty": "Colorectal Disease",
+      "category": "Gastroenterology",
+      "rating": 4.6,
+      "distance": 9.3,
+      "photo": "https://i.pravatar.cc/100?img=4",
+      "inNetwork": true,
+      "address": "128 Arch St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9031,
+        "longitude": -75.1863
+      },
+      "languages": [
+        "English",
+        "Russian"
+      ],
+      "nextAvailable": "Thursday, 10:30 AM",
+      "yearsExperience": 12,
+      "bio": "Expert in digestive health, including endoscopy, liver disease, and inflammatory bowel conditions.",
+      "locations": [
+        {
+          "name": "Main Hospital p38",
+          "address": "139 Market St, Philadelphia, PA 19123",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.992,
+            "longitude": -75.1732
+          }
+        },
+        {
+          "name": "City Clinic p38",
+          "address": "201 Chestnut St, Philadelphia, PA 19104",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.932,
+            "longitude": -75.1729
+          }
+        },
+        {
+          "name": "Westside Hub p38",
+          "address": "594 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9198,
+            "longitude": -75.2069
+          }
+        },
+        {
+          "name": "Eastside Care p38",
+          "address": "371 Chestnut St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9715,
+            "longitude": -75.2127
+          }
+        },
+        {
+          "name": "North Annex p38",
+          "address": "785 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9281,
+            "longitude": -75.1973
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p39",
+      "name": "Dr. Michelle Adams",
+      "specialty": "Inflammatory Bowel Disease",
+      "category": "Gastroenterology",
+      "rating": 4.8,
+      "distance": 15.7,
+      "photo": "https://i.pravatar.cc/100?img=68",
+      "inNetwork": true,
+      "address": "469 Market St, Philadelphia, PA 19107",
+      "coordinate": {
+        "latitude": 39.9945,
+        "longitude": -75.2108
+      },
+      "languages": [
+        "English",
+        "French"
+      ],
+      "nextAvailable": "Friday, 9:00 AM",
+      "yearsExperience": 13,
+      "bio": "Expert in digestive health, including endoscopy, liver disease, and inflammatory bowel conditions.",
+      "locations": [
+        {
+          "name": "Main Hospital p39",
+          "address": "797 Broad St, Philadelphia, PA 19146",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.973,
+            "longitude": -75.1476
+          }
+        },
+        {
+          "name": "City Clinic p39",
+          "address": "579 Walnut St, Philadelphia, PA 19147",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9352,
+            "longitude": -75.2018
+          }
+        },
+        {
+          "name": "Westside Hub p39",
+          "address": "107 South St, Philadelphia, PA 19107",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9529,
+            "longitude": -75.2009
+          }
+        },
+        {
+          "name": "Eastside Care p39",
+          "address": "611 South St, Philadelphia, PA 19107",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 40.0018,
+            "longitude": -75.1452
+          }
+        },
+        {
+          "name": "North Annex p39",
+          "address": "498 South St, Philadelphia, PA 19147",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9428,
+            "longitude": -75.1702
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p40",
+      "name": "Dr. Paul Hernandez",
+      "specialty": "Pancreatic Disease",
+      "category": "Gastroenterology",
+      "rating": 4.4,
+      "distance": 23.1,
+      "photo": "https://i.pravatar.cc/100?img=6",
+      "inNetwork": false,
+      "address": "927 Chestnut St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9315,
+        "longitude": -75.2098
+      },
+      "languages": [
+        "English",
+        "Spanish",
+        "Mandarin"
+      ],
+      "nextAvailable": null,
+      "yearsExperience": 14,
+      "bio": "Expert in digestive health, including endoscopy, liver disease, and inflammatory bowel conditions.",
+      "locations": [
+        {
+          "name": "Main Hospital p40",
+          "address": "410 Arch St, Philadelphia, PA 19147",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.968,
+            "longitude": -75.1575
+          }
+        },
+        {
+          "name": "City Clinic p40",
+          "address": "316 Broad St, Philadelphia, PA 19107",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9162,
+            "longitude": -75.1592
+          }
+        },
+        {
+          "name": "Westside Hub p40",
+          "address": "206 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.913,
+            "longitude": -75.1314
+          }
+        },
+        {
+          "name": "Eastside Care p40",
+          "address": "224 Market St, Philadelphia, PA 19146",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9899,
+            "longitude": -75.1379
+          }
+        },
+        {
+          "name": "North Annex p40",
+          "address": "919 Walnut St, Philadelphia, PA 19107",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9296,
+            "longitude": -75.1216
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p41",
+      "name": "Dr. Jessica White",
+      "specialty": "Geriatric Psychiatry",
+      "category": "Psychiatry",
+      "rating": 4.8,
+      "distance": 1.4,
+      "photo": "https://i.pravatar.cc/100?img=69",
+      "inNetwork": true,
+      "address": "663 Market St, Philadelphia, PA 19104",
+      "coordinate": {
+        "latitude": 39.9159,
+        "longitude": -75.2031
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 9:00 AM",
+      "yearsExperience": 9,
+      "bio": "Provides compassionate mental health care with evidence-based therapies and medication management.",
+      "locations": [
+        {
+          "name": "Main Hospital p41",
+          "address": "310 Chestnut St, Philadelphia, PA 19102",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9816,
+            "longitude": -75.1307
+          }
+        },
+        {
+          "name": "City Clinic p41",
+          "address": "331 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9238,
+            "longitude": -75.2036
+          }
+        },
+        {
+          "name": "Westside Hub p41",
+          "address": "266 Arch St, Philadelphia, PA 19107",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9584,
+            "longitude": -75.1225
+          }
+        },
+        {
+          "name": "Eastside Care p41",
+          "address": "217 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9985,
+            "longitude": -75.1454
+          }
+        },
+        {
+          "name": "North Annex p41",
+          "address": "954 Broad St, Philadelphia, PA 19104",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9816,
+            "longitude": -75.143
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p42",
+      "name": "Dr. Anthony Davis",
+      "specialty": "Addiction Psychiatry",
+      "category": "Psychiatry",
+      "rating": 4.6,
+      "distance": 3.8,
+      "photo": "https://i.pravatar.cc/100?img=8",
+      "inNetwork": true,
+      "address": "460 Market St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9156,
+        "longitude": -75.1607
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Tomorrow, 2:30 PM",
+      "yearsExperience": 10,
+      "bio": "Provides compassionate mental health care with evidence-based therapies and medication management.",
+      "locations": [
+        {
+          "name": "Main Hospital p42",
+          "address": "683 Broad St, Philadelphia, PA 19146",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9184,
+            "longitude": -75.1977
+          }
+        },
+        {
+          "name": "City Clinic p42",
+          "address": "711 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9104,
+            "longitude": -75.1454
+          }
+        },
+        {
+          "name": "Westside Hub p42",
+          "address": "488 South St, Philadelphia, PA 19147",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9094,
+            "longitude": -75.1967
+          }
+        },
+        {
+          "name": "Eastside Care p42",
+          "address": "968 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9895,
+            "longitude": -75.1579
+          }
+        },
+        {
+          "name": "North Annex p42",
+          "address": "872 Walnut St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9283,
+            "longitude": -75.1617
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p43",
+      "name": "Dr. Samantha Patel",
+      "specialty": "Anxiety & Mood Disorders",
+      "category": "Psychiatry",
+      "rating": 4.7,
+      "distance": 6.5,
+      "photo": "https://i.pravatar.cc/100?img=70",
+      "inNetwork": true,
+      "address": "696 Chestnut St, Philadelphia, PA 19123",
+      "coordinate": {
+        "latitude": 39.9248,
+        "longitude": -75.1981
+      },
+      "languages": [
+        "English"
+      ],
+      "nextAvailable": "Monday, 10:00 AM",
+      "yearsExperience": 11,
+      "bio": "Provides compassionate mental health care with evidence-based therapies and medication management.",
+      "locations": [
+        {
+          "name": "Main Hospital p43",
+          "address": "885 Chestnut St, Philadelphia, PA 19146",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9872,
+            "longitude": -75.2138
+          }
+        },
+        {
+          "name": "City Clinic p43",
+          "address": "232 Broad St, Philadelphia, PA 19147",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9546,
+            "longitude": -75.1995
+          }
+        },
+        {
+          "name": "Westside Hub p43",
+          "address": "693 Walnut St, Philadelphia, PA 19107",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9843,
+            "longitude": -75.1712
+          }
+        },
+        {
+          "name": "Eastside Care p43",
+          "address": "655 Walnut St, Philadelphia, PA 19104",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9871,
+            "longitude": -75.15
+          }
+        },
+        {
+          "name": "North Annex p43",
+          "address": "859 Market St, Philadelphia, PA 19123",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.985,
+            "longitude": -75.1813
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p44",
+      "name": "Dr. William Carter",
+      "specialty": "Child Psychiatry",
+      "category": "Psychiatry",
+      "rating": 4.5,
+      "distance": 11.9,
+      "photo": "https://i.pravatar.cc/100?img=10",
+      "inNetwork": true,
+      "address": "715 Arch St, Philadelphia, PA 19102",
+      "coordinate": {
+        "latitude": 39.9417,
+        "longitude": -75.1957
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 11:00 AM",
+      "yearsExperience": 12,
+      "bio": "Provides compassionate mental health care with evidence-based therapies and medication management.",
+      "locations": [
+        {
+          "name": "Main Hospital p44",
+          "address": "967 South St, Philadelphia, PA 19104",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.913,
+            "longitude": -75.1392
+          }
+        },
+        {
+          "name": "City Clinic p44",
+          "address": "217 Broad St, Philadelphia, PA 19147",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9936,
+            "longitude": -75.192
+          }
+        },
+        {
+          "name": "Westside Hub p44",
+          "address": "637 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0109",
+          "coordinate": {
+            "latitude": 39.9404,
+            "longitude": -75.1185
+          }
+        },
+        {
+          "name": "Eastside Care p44",
+          "address": "509 Walnut St, Philadelphia, PA 19102",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9478,
+            "longitude": -75.211
+          }
+        },
+        {
+          "name": "North Annex p44",
+          "address": "607 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.956,
+            "longitude": -75.1876
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p45",
+      "name": "Dr. Karen Yamamoto",
+      "specialty": "Trauma & PTSD",
+      "category": "Psychiatry",
+      "rating": 4.9,
+      "distance": 20.2,
+      "photo": "https://i.pravatar.cc/100?img=12",
+      "inNetwork": true,
+      "address": "314 South St, Philadelphia, PA 19146",
+      "coordinate": {
+        "latitude": 39.9063,
+        "longitude": -75.158
+      },
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "nextAvailable": "Tuesday, 3:30 PM",
+      "yearsExperience": 13,
+      "bio": "Provides compassionate mental health care with evidence-based therapies and medication management.",
+      "locations": [
+        {
+          "name": "Main Hospital p45",
+          "address": "667 Arch St, Philadelphia, PA 19146",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9741,
+            "longitude": -75.1308
+          }
+        },
+        {
+          "name": "City Clinic p45",
+          "address": "690 Broad St, Philadelphia, PA 19123",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 40.0002,
+            "longitude": -75.1191
+          }
+        },
+        {
+          "name": "Westside Hub p45",
+          "address": "275 Broad St, Philadelphia, PA 19146",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9476,
+            "longitude": -75.1924
+          }
+        },
+        {
+          "name": "Eastside Care p45",
+          "address": "364 Broad St, Philadelphia, PA 19107",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9055,
+            "longitude": -75.1391
+          }
+        },
+        {
+          "name": "North Annex p45",
+          "address": "228 Market St, Philadelphia, PA 19147",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9981,
+            "longitude": -75.1366
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p46",
+      "name": "Dr. George Liu",
+      "specialty": "Retina & Vitreous",
+      "category": "Ophthalmology",
+      "rating": 4.7,
+      "distance": 2.1,
+      "photo": "https://i.pravatar.cc/100?img=14",
+      "inNetwork": true,
+      "address": "959 South St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9553,
+        "longitude": -75.1304
+      },
+      "languages": [
+        "English",
+        "Mandarin"
+      ],
+      "nextAvailable": "Wednesday, 9:30 AM",
+      "yearsExperience": 14,
+      "bio": "Dedicated to preserving and restoring vision through advanced surgical and non-surgical treatments.",
+      "locations": [
+        {
+          "name": "Main Hospital p46",
+          "address": "727 Chestnut St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9468,
+            "longitude": -75.1155
+          }
+        },
+        {
+          "name": "City Clinic p46",
+          "address": "634 South St, Philadelphia, PA 19147",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9598,
+            "longitude": -75.1997
+          }
+        },
+        {
+          "name": "Westside Hub p46",
+          "address": "577 South St, Philadelphia, PA 19146",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9061,
+            "longitude": -75.1279
+          }
+        },
+        {
+          "name": "Eastside Care p46",
+          "address": "211 Arch St, Philadelphia, PA 19104",
+          "phone": "555-0103",
+          "coordinate": {
+            "latitude": 39.9762,
+            "longitude": -75.1769
+          }
+        },
+        {
+          "name": "North Annex p46",
+          "address": "848 Chestnut St, Philadelphia, PA 19102",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.96,
+            "longitude": -75.191
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p47",
+      "name": "Dr. Christine Moore",
+      "specialty": "Glaucoma Specialist",
+      "category": "Ophthalmology",
+      "rating": 4.8,
+      "distance": 4.6,
+      "photo": "https://i.pravatar.cc/100?img=16",
+      "inNetwork": true,
+      "address": "846 Broad St, Philadelphia, PA 19107",
+      "coordinate": {
+        "latitude": 39.9222,
+        "longitude": -75.1606
+      },
+      "languages": [
+        "English",
+        "Korean"
+      ],
+      "nextAvailable": "Wednesday, 2:00 PM",
+      "yearsExperience": 15,
+      "bio": "Dedicated to preserving and restoring vision through advanced surgical and non-surgical treatments.",
+      "locations": [
+        {
+          "name": "Main Hospital p47",
+          "address": "575 South St, Philadelphia, PA 19104",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9039,
+            "longitude": -75.2125
+          }
+        },
+        {
+          "name": "City Clinic p47",
+          "address": "744 Arch St, Philadelphia, PA 19107",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9923,
+            "longitude": -75.1596
+          }
+        },
+        {
+          "name": "Westside Hub p47",
+          "address": "651 Broad St, Philadelphia, PA 19102",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9908,
+            "longitude": -75.1596
+          }
+        },
+        {
+          "name": "Eastside Care p47",
+          "address": "734 Walnut St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9439,
+            "longitude": -75.1907
+          }
+        },
+        {
+          "name": "North Annex p47",
+          "address": "564 Chestnut St, Philadelphia, PA 19146",
+          "phone": "555-0107",
+          "coordinate": {
+            "latitude": 39.9319,
+            "longitude": -75.1728
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p48",
+      "name": "Dr. Robert Johnson",
+      "specialty": "Cataract Surgery",
+      "category": "Ophthalmology",
+      "rating": 4.6,
+      "distance": 7.2,
+      "photo": "https://i.pravatar.cc/100?img=18",
+      "inNetwork": true,
+      "address": "250 Chestnut St, Philadelphia, PA 19147",
+      "coordinate": {
+        "latitude": 39.9899,
+        "longitude": -75.1956
+      },
+      "languages": [
+        "English",
+        "Russian"
+      ],
+      "nextAvailable": "Thursday, 10:30 AM",
+      "yearsExperience": 16,
+      "bio": "Dedicated to preserving and restoring vision through advanced surgical and non-surgical treatments.",
+      "locations": [
+        {
+          "name": "Main Hospital p48",
+          "address": "297 Chestnut St, Philadelphia, PA 19107",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9377,
+            "longitude": -75.1242
+          }
+        },
+        {
+          "name": "City Clinic p48",
+          "address": "756 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9245,
+            "longitude": -75.1408
+          }
+        },
+        {
+          "name": "Westside Hub p48",
+          "address": "477 Chestnut St, Philadelphia, PA 19107",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9539,
+            "longitude": -75.167
+          }
+        },
+        {
+          "name": "Eastside Care p48",
+          "address": "845 Chestnut St, Philadelphia, PA 19146",
+          "phone": "555-0100",
+          "coordinate": {
+            "latitude": 39.9634,
+            "longitude": -75.1433
+          }
+        },
+        {
+          "name": "North Annex p48",
+          "address": "771 Walnut St, Philadelphia, PA 19147",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9119,
+            "longitude": -75.1589
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p49",
+      "name": "Dr. Elizabeth Torres",
+      "specialty": "Pediatric Ophthalmology",
+      "category": "Ophthalmology",
+      "rating": 4.5,
+      "distance": 13.8,
+      "photo": "https://i.pravatar.cc/100?img=20",
+      "inNetwork": true,
+      "address": "793 Arch St, Philadelphia, PA 19104",
+      "coordinate": {
+        "latitude": 39.9133,
+        "longitude": -75.1847
+      },
+      "languages": [
+        "English",
+        "French"
+      ],
+      "nextAvailable": "Friday, 9:00 AM",
+      "yearsExperience": 17,
+      "bio": "Dedicated to preserving and restoring vision through advanced surgical and non-surgical treatments.",
+      "locations": [
+        {
+          "name": "Main Hospital p49",
+          "address": "695 Walnut St, Philadelphia, PA 19102",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9242,
+            "longitude": -75.1549
+          }
+        },
+        {
+          "name": "City Clinic p49",
+          "address": "475 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9904,
+            "longitude": -75.213
+          }
+        },
+        {
+          "name": "Westside Hub p49",
+          "address": "329 Arch St, Philadelphia, PA 19102",
+          "phone": "555-0102",
+          "coordinate": {
+            "latitude": 39.9468,
+            "longitude": -75.1454
+          }
+        },
+        {
+          "name": "Eastside Care p49",
+          "address": "119 Walnut St, Philadelphia, PA 19123",
+          "phone": "555-0105",
+          "coordinate": {
+            "latitude": 39.9561,
+            "longitude": -75.2024
+          }
+        },
+        {
+          "name": "North Annex p49",
+          "address": "659 Arch St, Philadelphia, PA 19147",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.907,
+            "longitude": -75.1598
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    },
+    {
+      "id": "p50",
+      "name": "Dr. John Nakamura",
+      "specialty": "Cornea & External Disease",
+      "category": "Ophthalmology",
+      "rating": 4.4,
+      "distance": 17.5,
+      "photo": "https://i.pravatar.cc/100?img=22",
+      "inNetwork": false,
+      "address": "767 South St, Philadelphia, PA 19102",
+      "coordinate": {
+        "latitude": 39.9891,
+        "longitude": -75.2017
+      },
+      "languages": [
+        "English",
+        "Spanish",
+        "Mandarin"
+      ],
+      "nextAvailable": null,
+      "yearsExperience": 18,
+      "bio": "Dedicated to preserving and restoring vision through advanced surgical and non-surgical treatments.",
+      "locations": [
+        {
+          "name": "Main Hospital p50",
+          "address": "661 Chestnut St, Philadelphia, PA 19102",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.9717,
+            "longitude": -75.201
+          }
+        },
+        {
+          "name": "City Clinic p50",
+          "address": "822 South St, Philadelphia, PA 19146",
+          "phone": "555-0108",
+          "coordinate": {
+            "latitude": 39.9629,
+            "longitude": -75.1863
+          }
+        },
+        {
+          "name": "Westside Hub p50",
+          "address": "554 Arch St, Philadelphia, PA 19123",
+          "phone": "555-0104",
+          "coordinate": {
+            "latitude": 39.9964,
+            "longitude": -75.1691
+          }
+        },
+        {
+          "name": "Eastside Care p50",
+          "address": "299 South St, Philadelphia, PA 19107",
+          "phone": "555-0106",
+          "coordinate": {
+            "latitude": 39.927,
+            "longitude": -75.1618
+          }
+        },
+        {
+          "name": "North Annex p50",
+          "address": "870 Market St, Philadelphia, PA 19107",
+          "phone": "555-0101",
+          "coordinate": {
+            "latitude": 39.9791,
+            "longitude": -75.1472
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "initials": "JD",
+          "bg": "#c6e7ff",
+          "name": "John Doe",
+          "ago": "1 week ago",
+          "stars": 5,
+          "text": "Great doctor, very helpful and attentive."
+        },
+        {
+          "initials": "AS",
+          "bg": "#d3e4ff",
+          "name": "Alice Smith",
+          "ago": "2 weeks ago",
+          "stars": 4,
+          "text": "Good experience, highly recommended."
+        },
+        {
+          "initials": "BW",
+          "bg": "#ffdbc8",
+          "name": "Bob Wilson",
+          "ago": "1 month ago",
+          "stars": 5,
+          "text": "Very professional and caring."
+        }
+      ]
+    }
+  ],
+  "benefits": {
+    "planName": "Member Choice Plus",
+    "memberId": "AH-982341-01",
+    "costs": [
+      {
+        "label": "Annual Deductible",
+        "spent": 450,
+        "total": 1500
+      },
+      {
+        "label": "Out-of-Pocket Max",
+        "spent": 1280,
+        "total": 4500
+      }
+    ],
+    "breakdown": [
+      {
+        "id": "medical",
+        "icon": "hospital-box-outline",
+        "title": "Medical Care",
+        "subtitle": "Comprehensive Coverage",
+        "featured": true,
+        "lineItems": [
+          {
+            "label": "Primary Care",
+            "value": "$0 Copay"
+          },
+          {
+            "label": "Specialist Visit",
+            "value": "$15 Copay"
+          },
+          {
+            "label": "Urgent Care",
+            "value": "$30 Copay"
+          },
+          {
+            "label": "Emergency Room",
+            "value": "$90 Copay"
+          }
+        ]
+      },
+      {
+        "id": "dental",
+        "icon": "tooth-outline",
+        "title": "Dental",
+        "subtitle": "100% Coverage",
+        "featured": false,
+        "lineItems": [
+          {
+            "label": "Preventive Care",
+            "value": "100%"
+          },
+          {
+            "label": "Basic Services",
+            "value": "80%"
+          }
+        ]
+      },
+      {
+        "id": "vision",
+        "icon": "eye-outline",
+        "title": "Vision",
+        "subtitle": "$0 Copay",
+        "featured": false,
+        "lineItems": [
+          {
+            "label": "Eye Exam",
+            "value": "$0 Copay"
+          },
+          {
+            "label": "Frame Allowance",
+            "value": "$200"
+          }
+        ]
+      },
+      {
+        "id": "hearing",
+        "icon": "ear-hearing",
+        "title": "Hearing",
+        "subtitle": "$500 Allowance",
+        "featured": false,
+        "lineItems": [
+          {
+            "label": "Hearing Aid",
+            "value": "$500"
+          },
+          {
+            "label": "Exam",
+            "value": "$0 Copay"
+          }
+        ]
+      }
+    ],
+    "wellness": {
+      "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop",
+      "title": "Earn Rewards for Staying Healthy",
+      "body": "Complete wellness activities and earn points redeemable for gift cards, fitness gear, and more."
+    }
+  },
+  "claims": [
+    {
+      "id": "CLM-2024-0892",
+      "provider": "Heart & Vascular Institute",
+      "type": "Cardiology Consultation",
+      "date": "Jan 12, 2024",
+      "status": "Denied",
+      "memberResponsibility": 320.00,
+      "totalBilled": 320.00,
+      "planDiscount": 0,
+      "insurancePaid": 0,
+      "serviceDate": "Jan 12, 2024",
+      "category": "Specialist Services",
+      "doctor": "Dr. James Wilson, MD",
+      "doctorNpi": "1234567890",
+      "address": "155 Walnut St, Philadelphia, PA 19123",
+      "diagnoses": [
+        {
+          "code": "I10",
+          "title": "Essential (primary) hypertension",
+          "subtitle": "High blood pressure with no identifiable cause"
+        }
+      ],
+      "services": [
+        {
+          "code": "99214",
+          "title": "Office Visit",
+          "subtitle": "Complexity: Moderate"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Jan 13, 2024",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Jan 15, 2024",
+          "complete": true
+        },
+        {
+          "step": "Denied",
+          "date": "Jan 18, 2024",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "id": "CLM-99281-01",
+      "provider": "St. Mary's Medical",
+      "type": "Outpatient Services",
+      "date": "Oct 12, 2023",
+      "status": "Processed",
+      "memberResponsibility": 42.5,
+      "totalBilled": 1450,
+      "planDiscount": 820.5,
+      "insurancePaid": 587,
+      "serviceDate": "Oct 10, 2023",
+      "category": "Medical Services",
+      "doctor": "Dr. Elena Rodriguez, MD",
+      "doctorNpi": "1234567890",
+      "address": "900 University Terrace, Suite 400, Glen Cove, NY 11542",
+      "diagnoses": [
+        {
+          "code": "M17.12",
+          "title": "Unilateral primary osteoarthritis",
+          "subtitle": "Left knee primary osteoarthritis"
+        },
+        {
+          "code": "R52.0",
+          "title": "Acute pain",
+          "subtitle": "Localized musculoskeletal pain"
+        }
+      ],
+      "services": [
+        {
+          "code": "99214",
+          "title": "Office Visit",
+          "subtitle": "Established patient, moderate complexity"
+        },
+        {
+          "code": "73562",
+          "title": "X-ray, Knee",
+          "subtitle": "Radiologic exam, knee, 3 views"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Oct 11, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Oct 13, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Oct 14, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Pending",
+          "complete": false
+        }
+      ]
+    },
+    {
+      "id": "CLM-88310-44",
+      "provider": "Walgreens Pharmacy",
+      "type": "Prescription Meds",
+      "date": "Oct 10, 2023",
+      "status": "Pending Review",
+      "memberResponsibility": 12,
+      "totalBilled": 85,
+      "planDiscount": 42,
+      "insurancePaid": 31,
+      "serviceDate": "Oct 9, 2023",
+      "category": "Pharmacy",
+      "doctor": "Dr. Sarah Jenkins, MD",
+      "doctorNpi": "9876543210",
+      "address": "1200 Walgreens Blvd, Scottsdale, AZ 85251",
+      "diagnoses": [
+        {
+          "code": "I10",
+          "title": "Essential hypertension",
+          "subtitle": "Primary hypertension"
+        },
+        {
+          "code": "E11.9",
+          "title": "Type 2 diabetes mellitus",
+          "subtitle": "Without complications"
+        }
+      ],
+      "services": [
+        {
+          "code": "99213",
+          "title": "Prescription Fill",
+          "subtitle": "Lisinopril 10mg, 30-day supply"
+        },
+        {
+          "code": "99212",
+          "title": "Prescription Fill",
+          "subtitle": "Metformin 500mg, 30-day supply"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Oct 10, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "In Progress",
+          "complete": false
+        },
+        {
+          "step": "Processed",
+          "date": "Pending",
+          "complete": false
+        },
+        {
+          "step": "Paid",
+          "date": "Pending",
+          "complete": false
+        }
+      ]
+    },
+    {
+      "id": "CLM-77123-99",
+      "provider": "City General Hospital",
+      "type": "Emergency Visit",
+      "date": "Sep 28, 2023",
+      "status": "Paid",
+      "memberResponsibility": 150,
+      "totalBilled": 3200,
+      "planDiscount": 1800,
+      "insurancePaid": 1250,
+      "serviceDate": "Sep 27, 2023",
+      "category": "Emergency Services",
+      "doctor": "Dr. Marcus Thorne, MD",
+      "doctorNpi": "1122334455",
+      "address": "500 City General Way, San Francisco, CA 94102",
+      "diagnoses": [
+        {
+          "code": "R07.9",
+          "title": "Chest pain, unspecified",
+          "subtitle": "Unspecified chest pain"
+        },
+        {
+          "code": "Z03.89",
+          "title": "Encounter for observation",
+          "subtitle": "No diagnosis found"
+        }
+      ],
+      "services": [
+        {
+          "code": "99285",
+          "title": "Emergency Dept Visit",
+          "subtitle": "High complexity medical decision making"
+        },
+        {
+          "code": "93000",
+          "title": "Electrocardiogram",
+          "subtitle": "ECG with interpretation and report"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Sep 28, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Sep 29, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Oct 1, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Oct 3, 2023",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "id": "CLM-44201-BB",
+      "provider": "Sunrise Orthopedic Center",
+      "type": "Specialist Visit",
+      "date": "Sep 5, 2023",
+      "status": "Paid",
+      "memberResponsibility": 20,
+      "totalBilled": 620,
+      "planDiscount": 310,
+      "insurancePaid": 290,
+      "serviceDate": "Sep 5, 2023",
+      "category": "Specialist Services",
+      "doctor": "Dr. James Patel, MD",
+      "doctorNpi": "2233445566",
+      "address": "88 Orthopedic Way, Suite 200, Boston, MA 02115",
+      "diagnoses": [
+        {
+          "code": "M54.5",
+          "title": "Low back pain",
+          "subtitle": "Chronic lumbar strain"
+        }
+      ],
+      "services": [
+        {
+          "code": "99213",
+          "title": "Office Visit",
+          "subtitle": "Established patient, low complexity"
+        },
+        {
+          "code": "72100",
+          "title": "X-ray, Lumbar Spine",
+          "subtitle": "2-3 views"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Sep 6, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Sep 7, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Sep 9, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Sep 12, 2023",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "id": "CLM-55312-CC",
+      "provider": "ClearVision Eye Care",
+      "type": "Vision Services",
+      "date": "Aug 20, 2023",
+      "status": "Processed",
+      "memberResponsibility": 10,
+      "totalBilled": 280,
+      "planDiscount": 140,
+      "insurancePaid": 130,
+      "serviceDate": "Aug 20, 2023",
+      "category": "Vision Services",
+      "doctor": "Dr. Priya Sharma, OD",
+      "doctorNpi": "3344556677",
+      "address": "22 Vision Blvd, Chicago, IL 60601",
+      "diagnoses": [
+        {
+          "code": "H52.1",
+          "title": "Myopia",
+          "subtitle": "Bilateral myopia, moderate"
+        }
+      ],
+      "services": [
+        {
+          "code": "92004",
+          "title": "Eye Exam",
+          "subtitle": "Comprehensive, new patient"
+        },
+        {
+          "code": "V2100",
+          "title": "Spectacle Lenses",
+          "subtitle": "Single vision, sphere"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Aug 21, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Aug 22, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Aug 24, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Pending",
+          "complete": false
+        }
+      ]
+    },
+    {
+      "id": "CLM-66423-DD",
+      "provider": "BrightSmile Dental",
+      "type": "Dental Services",
+      "date": "Aug 8, 2023",
+      "status": "Paid",
+      "memberResponsibility": 0,
+      "totalBilled": 190,
+      "planDiscount": 95,
+      "insurancePaid": 95,
+      "serviceDate": "Aug 8, 2023",
+      "category": "Dental Services",
+      "doctor": "Dr. Linda Chu, DDS",
+      "doctorNpi": "4455667788",
+      "address": "15 Dental Plaza, Suite 101, Seattle, WA 98101",
+      "diagnoses": [
+        {
+          "code": "Z01.20",
+          "title": "Dental examination",
+          "subtitle": "Routine preventive visit"
+        }
+      ],
+      "services": [
+        {
+          "code": "D0120",
+          "title": "Periodic Oral Exam",
+          "subtitle": "Established patient"
+        },
+        {
+          "code": "D1110",
+          "title": "Prophylaxis",
+          "subtitle": "Adult cleaning"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Aug 9, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Aug 10, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Aug 11, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Aug 14, 2023",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "id": "CLM-77534-EE",
+      "provider": "Harbor Mental Health",
+      "type": "Mental Health Services",
+      "date": "Jul 25, 2023",
+      "status": "Processed",
+      "memberResponsibility": 30,
+      "totalBilled": 350,
+      "planDiscount": 175,
+      "insurancePaid": 145,
+      "serviceDate": "Jul 25, 2023",
+      "category": "Behavioral Health",
+      "doctor": "Dr. Aisha Patel, LCSW",
+      "doctorNpi": "5566778899",
+      "address": "300 Harbor Drive, Suite 410, Miami, FL 33101",
+      "diagnoses": [
+        {
+          "code": "F41.1",
+          "title": "Generalized anxiety disorder",
+          "subtitle": "Moderate severity"
+        }
+      ],
+      "services": [
+        {
+          "code": "90837",
+          "title": "Psychotherapy",
+          "subtitle": "Individual, 60 minutes"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Jul 26, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Jul 28, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Jul 30, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Pending",
+          "complete": false
+        }
+      ]
+    },
+    {
+      "id": "CLM-88645-FF",
+      "provider": "Metro Imaging Center",
+      "type": "Diagnostic Imaging",
+      "date": "Jul 10, 2023",
+      "status": "Paid",
+      "memberResponsibility": 50,
+      "totalBilled": 1800,
+      "planDiscount": 1100,
+      "insurancePaid": 650,
+      "serviceDate": "Jul 10, 2023",
+      "category": "Diagnostic Services",
+      "doctor": "Dr. Robert Kim, MD",
+      "doctorNpi": "6677889900",
+      "address": "500 Imaging Drive, Houston, TX 77001",
+      "diagnoses": [
+        {
+          "code": "M51.16",
+          "title": "Intervertebral disc degeneration",
+          "subtitle": "Lumbar region"
+        }
+      ],
+      "services": [
+        {
+          "code": "72148",
+          "title": "MRI Lumbar Spine",
+          "subtitle": "Without contrast"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Jul 11, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Jul 12, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Jul 14, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Jul 17, 2023",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "id": "CLM-99756-GG",
+      "provider": "Valley Physical Therapy",
+      "type": "Physical Therapy",
+      "date": "Jun 18, 2023",
+      "status": "Paid",
+      "memberResponsibility": 15,
+      "totalBilled": 420,
+      "planDiscount": 210,
+      "insurancePaid": 195,
+      "serviceDate": "Jun 18, 2023",
+      "category": "Rehabilitation",
+      "doctor": "Dr. Thomas Green, DPT",
+      "doctorNpi": "7788990011",
+      "address": "77 Rehab Road, Phoenix, AZ 85001",
+      "diagnoses": [
+        {
+          "code": "M79.3",
+          "title": "Panniculitis",
+          "subtitle": "Shoulder and rotator cuff strain"
+        }
+      ],
+      "services": [
+        {
+          "code": "97110",
+          "title": "Therapeutic Exercise",
+          "subtitle": "Each 15 minutes"
+        },
+        {
+          "code": "97140",
+          "title": "Manual Therapy",
+          "subtitle": "Each 15 minutes"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Jun 19, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Jun 20, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Jun 22, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Jun 25, 2023",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "id": "CLM-10867-HH",
+      "provider": "Apex Cardiology Group",
+      "type": "Cardiology Consult",
+      "date": "Jun 3, 2023",
+      "status": "Pending Review",
+      "memberResponsibility": 40,
+      "totalBilled": 950,
+      "planDiscount": 475,
+      "insurancePaid": 435,
+      "serviceDate": "Jun 3, 2023",
+      "category": "Specialist Services",
+      "doctor": "Dr. Maria Santos, MD",
+      "doctorNpi": "8899001122",
+      "address": "120 Heart Health Blvd, Dallas, TX 75201",
+      "diagnoses": [
+        {
+          "code": "I25.10",
+          "title": "Coronary artery disease",
+          "subtitle": "Without angina pectoris"
+        }
+      ],
+      "services": [
+        {
+          "code": "99244",
+          "title": "Cardiology Consult",
+          "subtitle": "Moderate complexity"
+        },
+        {
+          "code": "93306",
+          "title": "Echocardiogram",
+          "subtitle": "Transthoracic, complete"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Jun 4, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "In Progress",
+          "complete": false
+        },
+        {
+          "step": "Processed",
+          "date": "Pending",
+          "complete": false
+        },
+        {
+          "step": "Paid",
+          "date": "Pending",
+          "complete": false
+        }
+      ]
+    },
+    {
+      "id": "CLM-11978-II",
+      "provider": "Sunset Dermatology",
+      "type": "Dermatology Visit",
+      "date": "May 15, 2023",
+      "status": "Paid",
+      "memberResponsibility": 20,
+      "totalBilled": 380,
+      "planDiscount": 190,
+      "insurancePaid": 170,
+      "serviceDate": "May 15, 2023",
+      "category": "Specialist Services",
+      "doctor": "Dr. Sarah Nguyen, MD",
+      "doctorNpi": "9900112233",
+      "address": "45 Skin Care Lane, San Diego, CA 92101",
+      "diagnoses": [
+        {
+          "code": "L70.0",
+          "title": "Acne vulgaris",
+          "subtitle": "Moderate inflammatory acne"
+        }
+      ],
+      "services": [
+        {
+          "code": "99213",
+          "title": "Office Visit",
+          "subtitle": "Established patient, low complexity"
+        },
+        {
+          "code": "17000",
+          "title": "Destruction, benign lesion",
+          "subtitle": "First lesion"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "May 16, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "May 17, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "May 19, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "May 22, 2023",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "id": "CLM-12089-JJ",
+      "provider": "HealthFirst Urgent Care",
+      "type": "Urgent Care Visit",
+      "date": "Apr 28, 2023",
+      "status": "Paid",
+      "memberResponsibility": 25,
+      "totalBilled": 310,
+      "planDiscount": 155,
+      "insurancePaid": 130,
+      "serviceDate": "Apr 28, 2023",
+      "category": "Urgent Care",
+      "doctor": "Dr. Kevin Brooks, MD",
+      "doctorNpi": "1011121314",
+      "address": "200 Urgent Care Blvd, Portland, OR 97201",
+      "diagnoses": [
+        {
+          "code": "J06.9",
+          "title": "Acute upper respiratory infection",
+          "subtitle": "Unspecified URI"
+        }
+      ],
+      "services": [
+        {
+          "code": "99213",
+          "title": "Urgent Care Visit",
+          "subtitle": "Established patient"
+        },
+        {
+          "code": "87880",
+          "title": "Rapid Strep Test",
+          "subtitle": "Streptococcus, group A"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Apr 29, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Apr 30, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "May 2, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "May 5, 2023",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "id": "CLM-13190-KK",
+      "provider": "Premier Sleep Center",
+      "type": "Sleep Study",
+      "date": "Apr 5, 2023",
+      "status": "Processed",
+      "memberResponsibility": 75,
+      "totalBilled": 2400,
+      "planDiscount": 1400,
+      "insurancePaid": 925,
+      "serviceDate": "Apr 5, 2023",
+      "category": "Diagnostic Services",
+      "doctor": "Dr. Natalie Ford, MD",
+      "doctorNpi": "1516171819",
+      "address": "88 Sleep Way, Denver, CO 80201",
+      "diagnoses": [
+        {
+          "code": "G47.33",
+          "title": "Obstructive sleep apnea",
+          "subtitle": "Adult, moderate severity"
+        }
+      ],
+      "services": [
+        {
+          "code": "95810",
+          "title": "Polysomnography",
+          "subtitle": "Sleep staging, full night"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Apr 6, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Apr 8, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Apr 10, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Pending",
+          "complete": false
+        }
+      ]
+    },
+    {
+      "id": "CLM-15312-MM",
+      "provider": "Riverside Neurology",
+      "type": "Neurology Consult",
+      "date": "Mar 5, 2023",
+      "status": "Paid",
+      "memberResponsibility": 40,
+      "totalBilled": 780,
+      "planDiscount": 390,
+      "insurancePaid": 350,
+      "serviceDate": "Mar 5, 2023",
+      "category": "Specialist Services",
+      "doctor": "Dr. William Hayes, MD",
+      "doctorNpi": "2530414243",
+      "address": "99 Neuro Pkwy, Suite 300, Atlanta, GA 30301",
+      "diagnoses": [
+        {
+          "code": "G43.909",
+          "title": "Migraine, unspecified",
+          "subtitle": "Without status migrainosus, not intractable"
+        }
+      ],
+      "services": [
+        {
+          "code": "99244",
+          "title": "Neurology Consult",
+          "subtitle": "Moderate complexity"
+        },
+        {
+          "code": "95816",
+          "title": "EEG",
+          "subtitle": "Awake and drowsy"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Mar 6, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Mar 7, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Mar 9, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Mar 12, 2023",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "id": "CLM-14201-LL",
+      "provider": "CVS Specialty Pharmacy",
+      "type": "Specialty Pharmacy",
+      "date": "Mar 20, 2023",
+      "status": "Paid",
+      "memberResponsibility": 5,
+      "totalBilled": 120,
+      "planDiscount": 60,
+      "insurancePaid": 55,
+      "serviceDate": "Mar 20, 2023",
+      "category": "Pharmacy",
+      "doctor": "Dr. Eric Walsh, MD",
+      "doctorNpi": "2021222324",
+      "address": "600 CVS Drive, Minneapolis, MN 55401",
+      "diagnoses": [
+        {
+          "code": "E78.5",
+          "title": "Hyperlipidemia",
+          "subtitle": "Mixed hyperlipidemia"
+        }
+      ],
+      "services": [
+        {
+          "code": "99211",
+          "title": "Medication Refill",
+          "subtitle": "Rosuvastatin 10mg, 90-day supply"
+        }
+      ],
+      "journey": [
+        {
+          "step": "Received",
+          "date": "Mar 21, 2023",
+          "complete": true
+        },
+        {
+          "step": "Review",
+          "date": "Mar 22, 2023",
+          "complete": true
+        },
+        {
+          "step": "Processed",
+          "date": "Mar 23, 2023",
+          "complete": true
+        },
+        {
+          "step": "Paid",
+          "date": "Mar 25, 2023",
+          "complete": true
+        }
+      ]
+    }
+  ],
+  "wellnessWisdom": {
+    "badge": "ARTICLE",
+    "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop",
+    "title": "Mindful Eating for Longevity",
+    "description": "Discover how shifting your relationship with food can lead to increased energy and mental clarity during your senior years.",
+    "buttonText": "Read More"
+  },
+  "notifications": [
+    {
+      "id": "notif-1",
+      "type": "wellness",
+      "title": "Wellness Tip: Hydration",
+      "body": "Drinking an extra 8oz of water today can improve your energy levels by up to 20%. Try keeping a bottle on your desk as a reminder.",
+      "daysAgo": 0,
+      "hour": 10,
+      "minute": 30,
+      "read": false
+    },
+    {
+      "id": "notif-2",
+      "type": "appointment",
+      "title": "Appointment Reminder",
+      "body": "Your visit with Dr. Aris is scheduled for tomorrow at 2:00 PM at Jefferson Health – Center City. Please remember to fast 8 hours before your visit.",
+      "daysAgo": 0,
+      "hour": 8,
+      "minute": 15,
+      "read": false
+    },
+    {
+      "id": "notif-3",
+      "type": "claim",
+      "title": "Action Required: Missing Information",
+      "body": "Your claim #CLM-2891 for Emergency Room Services needs additional documentation. Please upload the itemized bill within 10 days to avoid denial.",
+      "daysAgo": 0,
+      "hour": 7,
+      "minute": 0,
+      "read": false
+    },
+    {
+      "id": "notif-4",
+      "type": "prescription",
+      "title": "Refill Ready for Pickup",
+      "body": "Your prescription for Lisinopril 10mg is ready at CVS Pharmacy on Chestnut St. It will be held for 7 days before being returned to stock.",
+      "daysAgo": 0,
+      "hour": 6,
+      "minute": 45,
+      "read": false
+    },
+    {
+      "id": "notif-5",
+      "type": "claim",
+      "title": "Claim Processed",
+      "body": "Your claim for the recent lab work at LabCorp has been successfully processed and approved. Insurance paid $184.00. Your responsibility is $15.00.",
+      "daysAgo": 1,
+      "hour": 15,
+      "minute": 45,
+      "read": true
+    },
+    {
+      "id": "notif-6",
+      "type": "wellness",
+      "title": "Annual Checkup Due This Month",
+      "body": "Your annual preventive care visit is due within 30 days. Preventive visits are covered at 100% under your Member Portal Plan plan — no copay required.",
+      "daysAgo": 1,
+      "hour": 9,
+      "minute": 0,
+      "read": false
+    },
+    {
+      "id": "notif-7",
+      "type": "appointment",
+      "title": "Appointment Confirmed",
+      "body": "Your follow-up with Dr. Sarah Jenkins has been confirmed. You will receive a video call link 15 minutes before your visit.",
+      "daysAgo": 1,
+      "hour": 8,
+      "minute": 30,
+      "read": true
+    },
+    {
+      "id": "notif-8",
+      "type": "prescription",
+      "title": "Prescription Expiring Soon",
+      "body": "Your prescription for Metformin 500mg has 1 refill remaining and expires in 2 weeks. Contact Dr. Jenkins to renew it before your supply runs out.",
+      "daysAgo": 3,
+      "hour": 11,
+      "minute": 20,
+      "read": true
+    },
+    {
+      "id": "notif-9",
+      "type": "claim",
+      "title": "Explanation of Benefits Available",
+      "body": "Your EOB for the Cardiology consultation is now available. Total billed: $320.00 — Plan paid: $272.00 — Your share: $48.00.",
+      "daysAgo": 4,
+      "hour": 14,
+      "minute": 0,
+      "read": true
+    },
+    {
+      "id": "notif-10",
+      "type": "wellness",
+      "title": "New Benefit: Free Gym Membership",
+      "body": "As a valued Member Portal Plan member, you now have access to a free Silver&Fit gym membership. Enroll through the Benefits tab to activate your account.",
+      "daysAgo": 5,
+      "hour": 10,
+      "minute": 0,
+      "read": false
+    },
+    {
+      "id": "notif-11",
+      "type": "security",
+      "title": "Password Changed Successfully",
+      "body": "Your account password was recently updated. If you did not make this change, please contact member support immediately at 1-800-521-6867.",
+      "daysAgo": 6,
+      "hour": 15,
+      "minute": 12,
+      "read": true
+    },
+    {
+      "id": "notif-12",
+      "type": "security",
+      "title": "New Device Login Detected",
+      "body": "A sign-in was detected from a new device: Chrome on Windows in Philadelphia, PA. If this was you, no action is needed. If not, reset your password now.",
+      "daysAgo": 11,
+      "hour": 14,
+      "minute": 0,
+      "read": true
+    },
+    {
+      "id": "notif-13",
+      "type": "appointment",
+      "title": "Visit Summary Ready",
+      "body": "Your after-visit summary for your recent Primary Care appointment with Dr. Jenkins is available. Review your care plan, lab orders, and follow-up instructions.",
+      "daysAgo": 16,
+      "hour": 9,
+      "minute": 30,
+      "read": true
+    },
+    {
+      "id": "notif-14",
+      "type": "prescription",
+      "title": "Specialty Pharmacy Order Shipped",
+      "body": "Your Atorvastatin 20mg (90-day supply) has been shipped via USPS Priority Mail and is on its way to your address on file.",
+      "daysAgo": 21,
+      "hour": 13,
+      "minute": 0,
+      "read": true
+    }
+  ],
+  "medicalHistory": [
+    {
+      "id": "mh-1",
+      "category": "Diagnosis",
+      "type": "diagnosis",
+      "title": "Type 2 Diabetes Mellitus",
+      "subtitle": "Dr. Sarah Jenkins • Primary Care",
+      "date": "2024-11-15",
+      "monthLabel": "NOV 2024",
+      "description": "Follow-up evaluation and management plan updated. Chronic management plan initiated with Metformin 500mg.",
+      "status": "urgent"
+    },
+    {
+      "id": "mh-2",
+      "category": "Lab results",
+      "type": "lab",
+      "title": "Comprehensive Blood Work",
+      "subtitle": "City Central Lab",
+      "date": "2024-10-22",
+      "monthLabel": "OCT 2024",
+      "description": "Metabolic panel and lipid profile conducted. Glucose level: 115 mg/dL (High).",
+      "showDownload": true
+    },
+    {
+      "id": "mh-3",
+      "category": "Vaccination",
+      "type": "immunization",
+      "title": "Annual Flu Shot",
+      "subtitle": "CVS Pharmacy",
+      "date": "2024-10-05",
+      "monthLabel": "OCT 2024",
+      "description": "Administered at CVS Pharmacy. Influenza vaccine quadrivalent. No adverse reactions.",
+      "status": "completed"
+    },
+    {
+      "id": "mh-4",
+      "category": "Test",
+      "type": "visit",
+      "title": "Annual Wellness Visit",
+      "subtitle": "Dr. Elena Rodriguez",
+      "date": "2024-10-10",
+      "monthLabel": "OCT 2024",
+      "description": "Annual wellness visit at St. Jude Medical Plaza. Comprehensive physical examination completed.",
+      "notes": "Patient maintains healthy BP. Diet and exercise routine is effective."
+    },
+    {
+      "id": "mh-5",
+      "category": "Lab results",
+      "type": "lab",
+      "title": "HbA1c Test",
+      "subtitle": "LabCorp Philadelphia",
+      "date": "2024-08-12",
+      "monthLabel": "AUG 2024",
+      "description": "HbA1c level: 6.8% (Target: <7.0%). Management plan is effective.",
+      "showDownload": true
+    },
+    {
+      "id": "mh-6",
+      "category": "Diagnosis",
+      "type": "diagnosis",
+      "title": "Hypertension",
+      "subtitle": "Dr. Marcus Thorne",
+      "date": "2024-07-20",
+      "monthLabel": "JUL 2024",
+      "description": "Blood pressure stabilized at 128/82. Continue current medication.",
+      "status": "completed"
+    }
+  ]
+}

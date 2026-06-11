@@ -1,0 +1,24 @@
+{
+  "name": "medicare-monorepo",
+  "private": true,
+  "packageManager": "npm@10.9.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "test:e2e:web": "turbo test:e2e --filter=@member-portal/web",
+    "test:e2e:mobile": "turbo test:e2e --filter=@member-portal/mobile",
+    "test:e2e": "turbo test:e2e",
+    "bdd:story": "npm run dev --workspace=packages/bdd-gen -- story",
+    "bdd:playwright": "npm run dev --workspace=packages/bdd-gen -- playwright",
+    "bdd:detox": "npm run dev --workspace=packages/bdd-gen -- detox",
+    "bdd:all": "npm run dev --workspace=packages/bdd-gen -- all",
+    "bdd:validate": "npm run dev --workspace=packages/bdd-gen -- validate"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.6"
+  }
+}
