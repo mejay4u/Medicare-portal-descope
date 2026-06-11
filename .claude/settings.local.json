@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($content = Get-Content 'C:\\\\ACH\\\\Medicare-portal-descope\\\\node_modules\\\\@descope\\\\core-js-sdk\\\\dist\\\\index.esm.js' -Raw; $m = [regex]::Match\\($content, '.{0,300}replace\\\\\\(o,.{0,500}'\\); $m.Value; $m2 = [regex]::Match\\($content, '.{0,400}length.{0,100}28.{0,400}'\\); \"`n=== 28 ===`n\"; $m2.Value)",
+      "PowerShell($ids = @\\('P3CHIJNMg1POPVCtNPhKQaZwKabM','P2FakeFakeFakeFakeFakeFake12'\\); foreach \\($id in $ids\\) { foreach \\($base in @\\('https://api.descope.com','https://api.euc1.descope.com'\\)\\) { try { $r = Invoke-WebRequest -Uri \"$base/$id/.well-known/openid-configuration\" -UseBasicParsing -TimeoutSec 15; \"$base  $id  -> HTTP $\\($r.StatusCode\\), body length $\\($r.Content.Length\\)\" } catch { \"$base  $id  -> $\\($_.Exception.Message\\)\" } } })",
+      "PowerShell(try { Invoke-RestMethod -Method Post -Uri 'https://api.descope.com/v1/auth/oauth/authorize?provider=google' -Headers @{Authorization='Bearer P3CHIJNMg1POPVCtNPhKQaZwKabM'} -ContentType 'application/json' -Body '{\"redirectUrl\":\"medicare-portal://auth\"}' } catch { $_.ErrorDetails.Message })"
+    ]
+  }
+}

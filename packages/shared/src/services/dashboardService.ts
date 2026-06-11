@@ -156,9 +156,10 @@ let _axiosClient: {
 } | null = null;
 // Default base URL — override before first query with setBaseUrl() (web) or
 // setHttpClient() (mobile, which carries the base URL inside the Axios instance).
+// `process` only exists in Node/Metro bundles; shared has no Node types, so go via globalThis
 let _baseUrl: string =
-  (typeof process !== 'undefined' ? process.env?.EXPO_PUBLIC_API_URL : undefined) ??
-  'http://localhost:3001';
+  (globalThis as { process?: { env?: Record<string, string | undefined> } }).process?.env
+    ?.EXPO_PUBLIC_API_URL ?? 'http://localhost:3001';
 
 /** Inject a pre-configured Axios (or compatible) instance. Mobile uses this. */
 export function setHttpClient(client: {

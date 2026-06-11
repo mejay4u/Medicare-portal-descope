@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { Animated, StyleSheet, StyleProp, ViewStyle } from 'react-native';
+import { useEffect, useRef } from 'react';
+import { Animated, StyleSheet, type StyleProp, type ViewStyle } from 'react-native';
 
 interface Props {
   /** Override width, height, borderRadius, margin, etc. */
