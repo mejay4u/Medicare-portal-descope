@@ -11,6 +11,7 @@ const envSchema = z.object({
   POSTHOG_HOST: z.string().optional(),
   DESCOPE_PROJECT_ID: z.string().optional(),
   DESCOPE_PASSKEY_FLOW_ID: z.string().optional(),
+  DESCOPE_ADD_PASSKEY_FLOW_ID: z.string().optional(),
 });
 
 const result = envSchema.safeParse({
@@ -20,6 +21,7 @@ const result = envSchema.safeParse({
   POSTHOG_HOST: process.env.EXPO_PUBLIC_POSTHOG_HOST,
   DESCOPE_PROJECT_ID: process.env.EXPO_PUBLIC_DESCOPE_PROJECT_ID,
   DESCOPE_PASSKEY_FLOW_ID: process.env.EXPO_PUBLIC_DESCOPE_PASSKEY_FLOW_ID,
+  DESCOPE_ADD_PASSKEY_FLOW_ID: process.env.EXPO_PUBLIC_DESCOPE_ADD_PASSKEY_FLOW_ID,
 });
 
 if (!result.success) {

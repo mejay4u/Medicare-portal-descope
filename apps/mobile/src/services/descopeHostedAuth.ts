@@ -10,10 +10,11 @@ const discovery: AuthSession.DiscoveryDocument = {
   tokenEndpoint: 'https://api.descope.com/oauth2/v1/token',
 };
 
-// Which Descope flow the hosted page runs. Must exist (deployed) in the
-// project; override with EXPO_PUBLIC_DESCOPE_PASSKEY_FLOW_ID.
+// Which Descope flows the hosted page runs. Both must exist (deployed) in the
+// project; override with the EXPO_PUBLIC_DESCOPE_*_FLOW_ID env vars.
 const PASSKEY_FLOW_ID =
   ENV.DESCOPE_PASSKEY_FLOW_ID || 'sign-in-passkeys-or-social-with-otp-mfa';
+const ADD_PASSKEY_FLOW_ID = ENV.DESCOPE_ADD_PASSKEY_FLOW_ID || 'add-passkeys';
 
 function decodeJwtPayload(jwt: string): Record<string, unknown> {
   try {
@@ -25,11 +26,28 @@ function decodeJwtPayload(jwt: string): Record<string, unknown> {
   }
 }
 
-/** Runs the Descope hosted sign-in flow (OIDC + PKCE) in the system browser
- *  and returns Descope session tokens. Used for passkey sign-in, where the
- *  WebAuthn ceremony must happen in a browser context. */
-export async function signInWithHostedFlow(
+/** Runs the passkey sign-in flow. */
+export function signInWithHostedFlow(
   redirectUri: string,
+  loginHint?: string,
+): Promise<DescopeTokenData> {
+  return runHostedFlow(redirectUri, PASSKEY_FLOW_ID, loginHint);
+}
+
+/** Runs the passkey enrollment flow for an existing (signed-in) user. */
+export function enrollPasskeyWithHostedFlow(
+  redirectUri: string,
+  loginHint?: string,
+): Promise<DescopeTokenData> {
+  return runHostedFlow(redirectUri, ADD_PASSKEY_FLOW_ID, loginHint);
+}
+
+/** Runs a Descope hosted flow (OIDC + PKCE) in the system browser and returns
+ *  Descope session tokens. Used for passkeys, where the WebAuthn ceremony must
+ *  happen in a browser context. */
+async function runHostedFlow(
+  redirectUri: string,
+  flowId: string,
   loginHint?: string,
 ): Promise<DescopeTokenData> {
   const projectId = ENV.DESCOPE_PROJECT_ID;
@@ -43,7 +61,7 @@ export async function signInWithHostedFlow(
     scopes: ['openid', 'profile', 'email'],
     usePKCE: true,
     extraParams: {
-      flow: PASSKEY_FLOW_ID,
+      flow: flowId,
       ...(loginHint ? { login_hint: loginHint } : {}),
     },
   });

@@ -15,8 +15,10 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
+import * as AuthSession from 'expo-auth-session';
 import { useNavigation } from '@react-navigation/native';
 import { descopeService } from '../services/descope.service';
+import { enrollPasskeyWithHostedFlow } from '../services/descopeHostedAuth';
 import {
   Colors,
   FontSize,
@@ -110,6 +112,26 @@ export default function SettingsScreen() {
     await setBiometricsEnabled(val);
   }
 
+  const [addingPasskey, setAddingPasskey] = useState(false);
+
+  // Opens the Descope hosted "add-passkeys" flow so the signed-in user can
+  // enroll a passkey for use on the login screen.
+  async function handleAddPasskey() {
+    setAddingPasskey(true);
+    try {
+      const redirectUri = AuthSession.makeRedirectUri({ scheme: 'medicare-portal' });
+      await enrollPasskeyWithHostedFlow(redirectUri, userId ?? undefined);
+      Alert.alert(
+        'Passkey Added',
+        'You can now use the Passkey button on the login screen to sign in.',
+      );
+    } catch (e) {
+      Alert.alert('Passkey', e instanceof Error ? e.message : 'Could not add a passkey.');
+    } finally {
+      setAddingPasskey(false);
+    }
+  }
+
   useEffect(() => {
     if (Platform.OS !== 'android') return;
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
@@ -149,7 +171,7 @@ export default function SettingsScreen() {
     }
   }
 
-  const { logout, refreshToken } = useAuthStore();
+  const { logout, refreshToken, userId } = useAuthStore();
 
   async function handleSignOut() {
     // With biometrics enabled, keep the refresh token in SecureStore (and skip
@@ -359,6 +381,25 @@ export default function SettingsScreen() {
                   thumbColor={biometricsEnabled ? Colors.primary : Colors.outline}
                 />
               </View>
+              <Divider />
+              <TouchableOpacity
+                style={styles.switchRow}
+                onPress={handleAddPasskey}
+                disabled={addingPasskey}
+                accessibilityRole="button"
+                accessibilityLabel="Add a passkey"
+                testID="add-passkey-row"
+              >
+                <View style={styles.iconBox}>
+                  <MaterialCommunityIcons name="key-outline" size={18} color={Colors.primary} />
+                </View>
+                <Text style={styles.switchLabel}>Add a Passkey</Text>
+                {addingPasskey ? (
+                  <ActivityIndicator size="small" color={Colors.primary} />
+                ) : (
+                  <MaterialCommunityIcons name="chevron-right" size={20} color={Colors.outline} />
+                )}
+              </TouchableOpacity>
             </View>
 
             {/* ── NOTIFICATIONS ────────────────────────────────────────── */}
