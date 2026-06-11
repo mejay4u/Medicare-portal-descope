@@ -168,7 +168,11 @@ describe('LoginScreen', () => {
     },
   );
 
-  it('blocks SSO sign-in and points to registration when no subscriber ID is linked', async () => {
+  it('sends first-time SSO users to the Verify Membership step with their session', async () => {
+    const noMembership = {
+      ...tokenData,
+      user: { loginIds: ['demo@example.com'], name: 'Demo Member' },
+    };
     mockDescopeService.oauthStart.mockResolvedValue({
       ok: true,
       data: { url: 'https://descope/login' },
@@ -177,20 +181,13 @@ describe('LoginScreen', () => {
       type: 'success',
       url: 'medicare-portal://auth?code=auth-code',
     });
-    mockDescopeService.oauthExchange.mockResolvedValue({
-      ok: true,
-      data: { ...tokenData, user: { loginIds: ['demo@example.com'], name: 'Demo Member' } },
-    });
+    mockDescopeService.oauthExchange.mockResolvedValue({ ok: true, data: noMembership });
 
     const { getByTestId } = renderScreen();
-    fireEvent.press(getByTestId('sso-google-button'));
+    fireEvent.press(getByTestId('sso-facebook-button'));
 
     await waitFor(() => {
-      expect(Alert.alert).toHaveBeenCalledWith(
-        'Account Incomplete',
-        expect.any(String),
-        expect.any(Array),
-      );
+      expect(navigation.navigate).toHaveBeenCalledWith('Register', { oauthData: noMembership });
     });
     expect(mockSetTokens).not.toHaveBeenCalled();
   });
@@ -242,6 +239,17 @@ describe('LoginScreen', () => {
       expect(mockSignInWithHostedFlow).toHaveBeenCalledWith('medicare-portal://auth', undefined);
       expect(mockSetTokens).toHaveBeenCalledWith('sess-jwt', 'refresh-jwt');
     });
+  });
+
+  it('rejects a WhatsApp phone number without a country code', async () => {
+    const { getByTestId, findByTestId, findByText } = renderScreen();
+
+    fireEvent.press(getByTestId('whatsapp-button'));
+    fireEvent.changeText(await findByTestId('whatsapp-phone-input'), '5551234567');
+    fireEvent.press(getByTestId('whatsapp-send-button'));
+
+    expect(await findByText(/Enter the full number with country code/)).toBeTruthy();
+    expect(mockDescopeService.whatsAppStart).not.toHaveBeenCalled();
   });
 
   it('completes the WhatsApp OTP flow end to end', async () => {

@@ -2,6 +2,7 @@ import type { NavigatorScreenParams } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import type { CompositeScreenProps } from '@react-navigation/native';
+import type { DescopeTokenData } from '../services/descope.service';
 
 // ── Root stack (Auth vs App) ────────────────────────────────────────────────
 
@@ -24,7 +25,9 @@ export type AppStackParamList = {
 
 export type AuthStackParamList = {
   Login: undefined;
-  Register: undefined;
+  /** oauthData is set when an SSO sign-in succeeded but the account has no
+   *  linked membership yet — Register then jumps straight to Verify Membership. */
+  Register: { oauthData?: DescopeTokenData } | undefined;
 };
 
 // ── Main tab navigator ───────────────────────────────────────────────────────

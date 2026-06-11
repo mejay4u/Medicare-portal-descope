@@ -3,7 +3,10 @@ import { ENV } from '../config/env';
 
 const projectId = ENV.DESCOPE_PROJECT_ID || '';
 
-export const descopeSdk = createSdk({ projectId });
+// createSdk throws on an empty projectId, which would crash the app at startup.
+// Use a placeholder so the app still boots; assertConfigured() blocks any auth
+// call with a clear message before the SDK is ever hit.
+export const descopeSdk = createSdk({ projectId: projectId || 'P2-not-configured' });
 
 export interface DescopeTokenData {
   sessionJwt: string;

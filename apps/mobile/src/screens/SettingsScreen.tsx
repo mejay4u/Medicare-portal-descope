@@ -152,8 +152,14 @@ export default function SettingsScreen() {
   const { logout, refreshToken } = useAuthStore();
 
   async function handleSignOut() {
-    await descopeService.signOut(refreshToken ?? undefined);
-    await clearAllData();
+    // With biometrics enabled, keep the refresh token in SecureStore (and skip
+    // server-side revocation) so Biometric sign-in can restore the session.
+    // "Reset All Data" below remains the full wipe.
+    const keepForBiometrics = await isBiometricsEnabled();
+    if (!keepForBiometrics) {
+      await descopeService.signOut(refreshToken ?? undefined);
+      await clearAllData();
+    }
     logout();
   }
 

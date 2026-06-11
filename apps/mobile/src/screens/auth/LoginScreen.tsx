@@ -26,6 +26,7 @@ import { signInWithHostedFlow } from '../../services/descopeHostedAuth';
 import { useAuthStore } from '../../store/auth.store';
 import { getRefreshToken, isBiometricsEnabled, saveRefreshToken } from '../../utils/secureStore';
 import WhatsAppLoginModal from '../../components/auth/WhatsAppLoginModal';
+import SsoProviderGrid from '../../components/auth/SsoProviderGrid';
 import type { LoginScreenProps } from '../../navigation/types';
 
 WebBrowser.maybeCompleteAuthSession();
@@ -33,13 +34,6 @@ WebBrowser.maybeCompleteAuthSession();
 const redirectUri = AuthSession.makeRedirectUri({ scheme: 'medicare-portal' });
 
 type IconName = React.ComponentProps<typeof MaterialCommunityIcons>['name'];
-
-const SSO_PROVIDERS: { id: SsoProvider; label: string; icon: IconName; color: string }[] = [
-  { id: 'google', label: 'Google', icon: 'google', color: '#DB4437' },
-  { id: 'apple', label: 'Apple', icon: 'apple', color: '#000000' },
-  { id: 'facebook', label: 'Facebook', icon: 'facebook', color: '#1877F2' },
-  { id: 'microsoft', label: 'Microsoft', icon: 'microsoft', color: '#00A4EF' },
-];
 
 export default function LoginScreen({ navigation }: LoginScreenProps) {
   const [loading, setLoading] = useState(false);
@@ -129,11 +123,9 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
             const existingSubId = data.user.customAttributes?.subscriberId || subscriberId;
 
             if (!existingSubId) {
-              Alert.alert(
-                'Account Incomplete',
-                'Please complete your registration first to link your membership.',
-                [{ text: 'Go to Register', onPress: () => navigation.navigate('Register') }],
-              );
+              // First-time SSO user: account is created, but membership isn't
+              // linked yet — continue on the Verify Membership step.
+              navigation.navigate('Register', { oauthData: data });
               return;
             }
 
@@ -161,7 +153,9 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
       if (!response.ok) {
         throw new Error('Failed to send magic link');
       }
-      setNotice(`Magic link sent to ${email}. Open it on this device to sign in.`);
+      setNotice(
+        `Magic link sent to ${email}. Open the email ON THIS DEVICE and tap the link to sign in (check spam too).`,
+      );
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed to send magic link.');
     } finally {
@@ -229,6 +223,8 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
         const response = await descopeService.refreshSession(token);
         if (response.ok && response.data) {
           const data = response.data as unknown as DescopeTokenData;
+          // Persist the rotated refresh token so the next biometric login works
+          if (data.refreshJwt) await saveRefreshToken(data.refreshJwt);
           setTokens(data.sessionJwt, data.refreshJwt ?? token);
           setUser(
             data.user?.loginIds?.[0] ?? 'Member',
@@ -289,23 +285,7 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
 
           {/* Form */}
           <View style={styles.form}>
-            <View style={styles.ssoGrid}>
-              {SSO_PROVIDERS.map(({ id, label, icon, color }) => (
-                <TouchableOpacity
-                  key={id}
-                  style={[styles.ssoBtn, loading && styles.btnDisabled]}
-                  onPress={() => handleSSO(id)}
-                  disabled={loading}
-                  activeOpacity={0.8}
-                  accessibilityRole="button"
-                  accessibilityLabel={`Continue with ${label}`}
-                  testID={`sso-${id}-button`}
-                >
-                  <MaterialCommunityIcons name={icon} size={20} color={color} />
-                  <Text style={styles.ssoBtnText}>{label}</Text>
-                </TouchableOpacity>
-              ))}
-            </View>
+            <SsoProviderGrid disabled={loading} onPress={handleSSO} />
 
             <View style={styles.dividerContainer}>
               <View style={styles.dividerLine} />
@@ -518,26 +498,6 @@ const styles = StyleSheet.create({
   },
   btnDisabled: { opacity: 0.6 },
   btnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
-  ssoGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
-  ssoBtn: {
-    flexDirection: 'row',
-    flexBasis: '47%',
-    flexGrow: 1,
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderColor: '#e1e3e4',
-    borderRadius: 12,
-    paddingVertical: 14,
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
-  },
-  ssoBtnText: { color: '#003461', fontSize: 15, fontWeight: '700' },
   altMethods: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
   altBtn: {
     flexDirection: 'row',

@@ -15,9 +15,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import * as AuthSession from 'expo-auth-session';
-import { descopeService, type DescopeTokenData } from '../../services/descope.service';
+import {
+  descopeService,
+  type DescopeTokenData,
+  type SsoProvider,
+} from '../../services/descope.service';
 import { useAuthStore } from '../../store/auth.store';
 import { saveRefreshToken } from '../../utils/secureStore';
+import SsoProviderGrid from '../../components/auth/SsoProviderGrid';
 import type { RegisterScreenProps } from '../../navigation/types';
 
 WebBrowser.maybeCompleteAuthSession();
@@ -30,11 +35,14 @@ interface OAuthUserData {
   user: DescopeTokenData['user'];
 }
 
-export default function RegisterScreen({ navigation }: RegisterScreenProps) {
+export default function RegisterScreen({ navigation, route }: RegisterScreenProps) {
   const { setTokens, setUser } = useAuthStore();
   const [loading, setLoading] = useState(false);
-  const [step, setStep] = useState<'sso' | 'attributes'>('sso');
-  const [oauthData, setOauthData] = useState<OAuthUserData | null>(null);
+  // When Login hands off a fresh SSO session without a linked membership,
+  // start directly on the Verify Membership step.
+  const handedOffOauth = route.params?.oauthData ?? null;
+  const [step, setStep] = useState<'sso' | 'attributes'>(handedOffOauth ? 'attributes' : 'sso');
+  const [oauthData, setOauthData] = useState<OAuthUserData | null>(handedOffOauth);
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -48,12 +56,12 @@ export default function RegisterScreen({ navigation }: RegisterScreenProps) {
   const updateForm = (key: keyof typeof form, value: string) =>
     setForm(prev => ({ ...prev, [key]: value }));
 
-  const handleGoogleSSO = async () => {
+  const handleSSO = async (provider: SsoProvider) => {
     setLoading(true);
     try {
-      const response = await descopeService.oauthStart('google', redirectUri);
+      const response = await descopeService.oauthStart(provider, redirectUri);
       if (!response.ok || !response.data?.url) {
-        throw new Error(response.error?.errorMessage || 'Failed to start Google SSO');
+        throw new Error(response.error?.errorMessage || `Failed to start ${provider} sign-in`);
       }
 
       const result = await WebBrowser.openAuthSessionAsync(response.data.url, redirectUri);
@@ -79,7 +87,7 @@ export default function RegisterScreen({ navigation }: RegisterScreenProps) {
         }
       }
     } catch (error: unknown) {
-      Alert.alert('Login Failed', error instanceof Error ? error.message : 'An error occurred during Google SSO.');
+      Alert.alert('Login Failed', error instanceof Error ? error.message : 'An error occurred during social sign-in.');
     } finally {
       setLoading(false);
     }
@@ -122,7 +130,7 @@ export default function RegisterScreen({ navigation }: RegisterScreenProps) {
     }
 
     if (!oauthData) {
-      Alert.alert('Error', 'Session expired. Please try signing in with Google again.');
+      Alert.alert('Error', 'Session expired. Please try social sign-in again.');
       setStep('sso');
       return;
     }
@@ -174,16 +182,7 @@ export default function RegisterScreen({ navigation }: RegisterScreenProps) {
 
           {step === 'sso' ? (
             <View style={styles.form}>
-              <TouchableOpacity
-                style={[styles.googleBtn, loading && styles.btnDisabled]}
-                onPress={handleGoogleSSO}
-                disabled={loading}
-                accessibilityRole="button"
-                accessibilityLabel="Continue with Google"
-              >
-                <MaterialCommunityIcons name="google" size={20} color="#003461" style={styles.googleIcon} />
-                <Text style={styles.googleBtnText}>Continue with Google</Text>
-              </TouchableOpacity>
+              <SsoProviderGrid disabled={loading} onPress={handleSSO} />
 
               <View style={styles.dividerContainer}>
                 <View style={styles.dividerLine} />
@@ -372,23 +371,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 12,
   },
-  googleBtn: {
-    flexDirection: 'row',
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderColor: '#e1e3e4',
-    borderRadius: 12,
-    paddingVertical: 16,
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
-  },
-  googleIcon: { marginRight: 10 },
-  googleBtnText: { color: '#003461', fontSize: 16, fontWeight: '700' },
   submitBtnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
   btnDisabled: { opacity: 0.6 },
   dividerContainer: { flexDirection: 'row', alignItems: 'center', marginVertical: 16 },

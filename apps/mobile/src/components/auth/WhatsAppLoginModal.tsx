@@ -41,15 +41,23 @@ export default function WhatsAppLoginModal({ visible, onClose, onSuccess }: What
     onClose();
   }
 
+  // Descope requires E.164 format ("+<country><number>") and rejects anything
+  // else as "Illegal phone number" — normalize and validate before calling it.
+  function normalizedPhone(): string | null {
+    const cleaned = phone.replace(/[\s\-().]/g, '');
+    return /^\+\d{8,15}$/.test(cleaned) ? cleaned : null;
+  }
+
   async function handleSendCode() {
-    if (!phone.trim()) {
-      setError('Please enter your phone number.');
+    const e164 = normalizedPhone();
+    if (!e164) {
+      setError('Enter the full number with country code, e.g. +1 555 123 4567 or +91 98765 43210.');
       return;
     }
     setBusy(true);
     setError(null);
     try {
-      const response = await descopeService.whatsAppStart(phone.trim());
+      const response = await descopeService.whatsAppStart(e164);
       if (!response.ok) {
         throw new Error('Failed to send WhatsApp code');
       }
@@ -69,7 +77,7 @@ export default function WhatsAppLoginModal({ visible, onClose, onSuccess }: What
     setBusy(true);
     setError(null);
     try {
-      const response = await descopeService.whatsAppVerify(phone.trim(), code.trim());
+      const response = await descopeService.whatsAppVerify(normalizedPhone() ?? phone.trim(), code.trim());
       if (!response.ok || !response.data) {
         throw new Error('Invalid code');
       }
@@ -106,7 +114,8 @@ export default function WhatsAppLoginModal({ visible, onClose, onSuccess }: What
           {step === 'phone' ? (
             <>
               <Text style={styles.subtitle}>
-                Enter your phone number and we&apos;ll send a one-time code to your WhatsApp.
+                Enter your phone number including the country code (e.g. +1, +91) and
+                we&apos;ll send a one-time code to your WhatsApp.
               </Text>
               <TextInput
                 style={styles.input}
